@@ -35,7 +35,7 @@ const features = [
     badge: 'Specs',
     icon: Settings,
     title: 'Your specs. Your rules.',
-    description: 'Pre-loaded with API 5L standards (Grade B through X65, PSL1 and PSL2). Add your own custom specs for project-specific requirements. Define min/max ranges, required parameters, and warning thresholds.',
+    description: 'Pre-loaded with API 5L (Grade B through X65) and API 5CT (J55 through Q125) standards, PSL1 and PSL2. Add your own custom specs for project-specific requirements. Define min/max ranges, required parameters, and warning thresholds.',
     visual: <MtrSpecsMockup />,
   },
   {
@@ -49,14 +49,14 @@ const features = [
     badge: 'Verification',
     icon: Layers,
     title: "Compliance grouped by heat — because that's how MTRs work",
-    description: "Results are organized by heat number. One heat can have 50 pipes. Check the heat once, apply to all. Expandable views show every parameter with its extracted value, spec range, and result.",
+    description: "Results are organized by heat number. One heat can have 50 joints. Check the heat once, apply to all. Expandable views show every parameter with its extracted value, spec range, and result.",
     visual: <MtrHeatVerificationMockup />,
   },
   {
     badge: 'Integration',
     icon: Link2,
     title: 'Compliance records live on the pipe, not in a folder',
-    description: 'When MTR.AI is used with AI Native Pipe Management, compliance status appears on every pipe, every work order, and every product passport. No separate filing system needed.',
+    description: 'When MTR.AI is used with AI Native Pipe Management, compliance status appears on every joint, every work order, and every pipe passport. No separate filing system needed.',
     visual: <MtrIntegrationMockup />,
   },
 ]
@@ -72,7 +72,7 @@ const howItWorks = [
   },
   {
     title: 'Configure Specs',
-    description: 'We load your project-specific specifications alongside API 5L standards.',
+    description: 'We load your project-specific specifications alongside API 5L & 5CT standards.',
   },
   {
     title: 'Verify',
@@ -86,6 +86,8 @@ const specs = [
   'API 5L X52 (PSL1, PSL2)',
   'API 5L X60 (PSL1)',
   'API 5L X65 (PSL1)',
+  'API 5CT J55, K55, N80, L80 (PSL1, PSL2)',
+  'API 5CT P110, Q125 (PSL1, PSL2)',
   'Custom specs: add your own project-specific requirements',
 ]
 
@@ -95,7 +97,7 @@ export default function Mtr() {
       <ProductHero
         label="MTR.AI"
         headline="MTR compliance on autopilot."
-        subheadline="Upload Mill Test Reports. AI extracts the data, checks it against your specs, and flags anything out of range — in seconds, not hours."
+        subheadline="Upload Mill Test Reports. AI extracts the data, checks it against API 5L, 5CT, and your custom specs, and flags anything out of range — in seconds, not hours."
         accentColor="text-secondary"
       />
 
@@ -193,11 +195,11 @@ export default function Mtr() {
               Stop checking MTRs by hand
             </h2>
             <p className="text-text-muted mb-8">
-              Custom-configured for your facility. Deployed in weeks, not months.
+              Configured around your workflow. Live in weeks.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="mailto:hello@octg.ai?subject=Demo%20Request" size="xl">
-                Schedule a Demo
+                See MTR Compliance in Action
                 <ArrowRight className="w-5 h-5" />
               </Button>
               <Button href="mailto:hello@octg.ai?subject=Consultation" variant="secondary" size="xl">

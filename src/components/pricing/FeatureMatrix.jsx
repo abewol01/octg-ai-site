@@ -28,7 +28,7 @@ const categories = [
       { name: 'Barcode Generation (Zebra)', starter: true, professional: true, enterprise: true },
       { name: 'VLX Barcode Scanning', starter: true, professional: true, enterprise: true },
       { name: 'Shipping Manifest Export', starter: true, professional: true, enterprise: true },
-      { name: 'Product Passport Export', starter: true, professional: true, enterprise: true },
+      { name: 'Pipe Passport Export', starter: true, professional: true, enterprise: true },
       { name: 'Yard Storage Mapping', starter: false, professional: true, enterprise: true },
       { name: 'Activity Log', starter: false, professional: '90-day', enterprise: 'Unlimited' },
       { name: 'Custom Integrations', starter: false, professional: false, enterprise: true },

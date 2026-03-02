@@ -6,7 +6,7 @@ import Card from '../shared/Card'
 const painPoints = [
   {
     icon: ClipboardList,
-    title: 'Data entry at every stage',
+    title: 'Re-keying pipe data at every stage',
     text: "Operators manually type heat numbers, mill readings, and pipe specs at the final bench. Then again at load out. Then again into a spreadsheet. Every keystroke is a chance for error.",
   },
   {

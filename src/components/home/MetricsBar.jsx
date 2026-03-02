@@ -6,7 +6,7 @@ const metrics = [
     value: 40,
     suffix: '+',
     unit: 'hrs/month saved',
-    context: 'Eliminated manual data entry across receiving, QC, and shipping',
+    context: 'Eliminated re-keying across receiving, QC, and load out',
   },
   {
     label: 'Zero',
@@ -17,7 +17,7 @@ const metrics = [
     value: 100,
     suffix: '%',
     unit: 'traceability',
-    context: 'Every pipe tracked from arrival to delivery with full audit history',
+    context: 'Every joint tracked from receiving to load out with full audit history',
   },
   {
     label: 'Minutes',

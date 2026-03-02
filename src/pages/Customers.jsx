@@ -19,7 +19,7 @@ const logoStrip = [
 const stats = [
   { value: 40, suffix: '+', label: 'hrs/month saved', detail: 'per facility on average' },
   { value: 98, suffix: '%', label: 'accuracy', detail: 'AI extraction on MTR data' },
-  { value: 15, suffix: 'k+', label: 'pipes tracked', detail: 'per facility with zero re-entry' },
+  { value: 15, suffix: 'k+', label: 'joints tracked', detail: 'per facility with zero re-entry' },
   { value: 30, suffix: 's', label: 'tally generation', detail: 'down from 3+ hours manual' },
 ]
 
@@ -27,14 +27,14 @@ const testimonials = [
   {
     quote: "We went from spending 3 hours on shipping tallies to generating them in 30 seconds. OCTG.AI isn't just better software — it's a different category.",
     author: 'Operations Manager',
-    company: 'Gulf Coast Coating Facility',
+    company: 'Gulf Coast Coating Facility (200k+ joints/year)',
     vertical: 'Coating',
     color: 'orange',
   },
   {
     quote: "The MTR compliance engine caught a heat that was marginally out of spec. That's the kind of catch that used to require a quality engineer spending half a day with a calculator.",
     author: 'Quality Director',
-    company: 'Permian Basin E&P',
+    company: '50,000 BOE/day E&P Operator, Permian Basin',
     vertical: 'E&P',
     color: 'indigo',
   },
@@ -46,7 +46,7 @@ const testimonials = [
     color: 'blue',
   },
   {
-    quote: "Our clients used to wait days for documentation packages. Now we hand them a complete product passport — MTRs, inspections, compliance — before the truck leaves the yard.",
+    quote: "Our clients used to wait days for documentation packages. Now we hand them a complete pipe passport — MTRs, inspections, compliance — before the truck leaves the yard.",
     author: 'VP of Operations',
     company: 'Midstream Pipe Distributors',
     vertical: 'Distribution',
@@ -79,11 +79,11 @@ const verticals = [
     name: 'E&P Operators',
     icon: Droplets,
     results: [
-      'MTR compliance verified before pipe arrives on site',
+      'API 5CT & 5L compliance verified before pipe arrives on site',
       'Custom spec management catches project-specific requirements',
       'Full traceability from mill cert to field installation',
     ],
-    products: ['MTR.AI', 'Product Passports'],
+    products: ['MTR.AI', 'Pipe Passports'],
   },
   {
     name: 'Inspection Companies',
@@ -100,11 +100,11 @@ const verticals = [
     name: 'Pipe Mills',
     icon: Building2,
     results: [
-      'Digital product passports shipped with every order',
+      'Digital pipe passports shipped with every order',
       'MTR compliance pre-verified against customer specs',
       'Differentiate on transparency and data quality',
     ],
-    products: ['MTR.AI', 'Product Passports'],
+    products: ['MTR.AI', 'Pipe Passports'],
   },
 ]
 
@@ -360,7 +360,7 @@ export default function Customers() {
         <div className="max-w-3xl mx-auto px-6 text-center">
           <ScrollReveal>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-text dark:text-white mb-4">
-              Join the facilities modernizing pipe operations
+              Join the yards and facilities running on OCTG.AI
             </h2>
             <p className="text-text-muted mb-8">
               Custom-configured for your facility. Deployed in weeks, not months.

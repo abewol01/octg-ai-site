@@ -330,7 +330,7 @@ const capabilities = [
   {
     icon: Barcode,
     title: 'Barcode Scanning & Generation',
-    description: 'Generate unique barcodes per pipe at the final bench. Scan at load out to build manifests automatically. Barcode encodes Work Order / Heat / Length / Sequence — all parseable fields.',
+    description: 'Generate unique barcodes per joint at the final bench. Scan at load out to build manifests automatically. Barcode encodes Work Order / Heat-Lot / Length / Sequence — all parseable fields.',
     tags: ['Code128', 'ZPL', 'Zebra Printers'],
     color: '#f97316',
   },
@@ -344,7 +344,7 @@ const capabilities = [
   {
     icon: ClipboardList,
     title: 'Automated Tallies',
-    description: 'Replace hand-tallied pipe counts with digital tallies that auto-reconcile against expected deliveries. Discrepancies flagged instantly. Tally data flows directly into inventory.',
+    description: 'Replace hand-tallied joint counts with digital tallies that auto-reconcile against expected deliveries. Discrepancies flagged instantly. Tally data flows directly into inventory.',
     tags: ['Auto-reconcile', 'Digital', 'Real-time'],
     color: '#eab308',
   },
@@ -371,7 +371,7 @@ function Capabilities() {
         <SectionHeading
           label="Capabilities"
           title="What VLX Field Intelligence captures."
-          description="Purpose-built inspection templates for every stage of pipe coating operations."
+          description="Purpose-built inspection templates for every stage of pipe coating operations. Built around API RP 5A5, DS-1, and client-specific requirements."
         />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
@@ -419,21 +419,21 @@ const inspectionTypes = [
   {
     title: 'Inbound Inspection',
     subtitle: 'Verify what arrives matches what was promised.',
-    description: "When a truck rolls in, operators scan or enter pipe details against the advance PDF tally from the client. VLX captures pipe-by-pipe condition, counts by heat number, and flags any discrepancies — damaged pipes, missing pieces, or MTR mismatches. The inbound inspection creates the digital birth certificate for every pipe entering your facility.",
+    description: "When a truck rolls in, operators scan or enter pipe details against the advance PDF tally from the client. VLX captures joint-by-joint condition, counts by heat/lot number, and flags any discrepancies — damaged joints, missing pieces, or MTR mismatches. The inbound inspection creates the digital birth certificate for every joint entering your facility.",
     features: [
-      'Pipe count reconciliation against advance tallies',
+      'Joint count reconciliation against advance tallies',
       'Damage documentation with geotagged photos',
-      'Heat number verification and MTR attachment',
+      'Heat/lot number verification and MTR attachment',
       'Automatic inventory record creation on completion',
     ],
   },
   {
     title: 'Coating & QC Inspection',
-    subtitle: 'Every reading. Every pipe. Every time.',
-    description: 'At the final bench, operators record mill thickness readings, coating measurements, and quality observations per pipe. VLX templates enforce data completeness — required fields, valid ranges, conditional logic. No more missed readings or impossible values slipping through. Each pipe gets a pass/fail determination backed by actual measurements.',
+    subtitle: 'Every reading. Every joint. Every time.',
+    description: 'At the final bench, operators record mill thickness readings, coating measurements, and quality observations per joint. VLX templates enforce data completeness — required fields, valid ranges, conditional logic. No more missed readings or impossible values slipping through. Each joint gets a pass/fail determination backed by actual measurements.',
     features: [
       'Mill thickness and DFT readings with validation',
-      'Pass / Fail / Conditional status per pipe',
+      'Pass / Fail / Conditional status per joint',
       'Damage and defect documentation with photos',
       'Barcode generation triggered on QC completion',
     ],
@@ -441,20 +441,20 @@ const inspectionTypes = [
   {
     title: 'Load Out & Shipping',
     subtitle: 'Scan it. Ship it. Prove it.',
-    description: "During load out, operators scan each pipe's barcode as it's loaded onto the truck. VLX records exactly which pipes went on which truck, who loaded them, and when. The system auto-generates shipping manifests with every field your client needs — no manual spreadsheet assembly. Bill of lading, truck ID, and inspector signature all captured digitally.",
+    description: "During load out, operators scan each joint's barcode as it's loaded onto the truck. VLX records exactly which joints went on which truck, who loaded them, and when. The system auto-generates shipping manifests and BOLs with every field your client needs — no manual spreadsheet assembly. Truck ID and inspector signature all captured digitally.",
     features: [
-      'Per-pipe barcode scanning during loading',
+      'Per-joint barcode scanning during loading',
       'Automated manifest generation (CSV export)',
       'Bill of lading and truck assignment tracking',
       'Inspector signature capture and verification',
     ],
   },
   {
-    title: 'Product Passport & Reporting',
-    subtitle: 'The complete story of every pipe. One click.',
-    description: "Every pipe gets a Product Passport — a comprehensive PDF that tells its complete story: where it came from, what was done to it, who inspected it, and what the results were. Mill Test Reports, coating readings, inspection photos, and chain of custody — all in one document your client can trust. Generated automatically from VLX evidence.",
+    title: 'Pipe Passport & Reporting',
+    subtitle: 'The complete story of every joint. One click.',
+    description: "Every joint gets a Pipe Passport — a comprehensive PDF that tells its complete story: where it came from, what was done to it, who inspected it, and what the results were. Mill Test Reports, coating readings, inspection photos, and chain of custody — all in one document your client can trust. Generated automatically from VLX evidence.",
     features: [
-      'Full lifecycle traceability per pipe',
+      'Full lifecycle traceability per joint',
       'MTR attachment and compliance verification',
       'Auto-generated PDF with all inspection evidence',
       'Shareable link for client-side verification',
@@ -519,7 +519,7 @@ const integrationMethods = [
   {
     icon: Download,
     title: 'CSV/PDF Export',
-    description: 'One-click manifests, tallies, and product passports. Compatible with any system that accepts spreadsheets.',
+    description: 'One-click manifests, tallies, and pipe passports. Compatible with any system that accepts spreadsheets.',
   },
 ]
 

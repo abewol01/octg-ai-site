@@ -9,7 +9,7 @@ const technologies = [
   {
     icon: Package,
     title: 'Inventory Intelligence Engine',
-    description: 'Work order-centric tracking that derives status automatically from pipe states. Configurable pipeline stages, custom status workflows, and real-time visibility across your entire yard.',
+    description: 'Work order-centric tracking that derives status automatically from pipe states. Track by OD, wall, grade, weight, and connection type. Configurable pipeline stages, custom status workflows, and real-time visibility across your entire yard.',
   },
   {
     icon: Sparkles,
@@ -19,7 +19,7 @@ const technologies = [
   {
     icon: ShieldCheck,
     title: 'Compliance Engine',
-    description: 'Pre-loaded with API 5L standards. Extended with your project-specific specs, custom parameter ranges, and warning thresholds. Per-heat verification with full audit trail.',
+    description: 'Pre-loaded with API 5L & 5CT standards (line pipe and casing). Extended with your project-specific specs, custom parameter ranges, and warning thresholds. Per-heat verification with full audit trail.',
   },
   {
     icon: Smartphone,
@@ -65,7 +65,7 @@ const platformIncludes = [
   'AI document processing (MTR classification + extraction)',
   'Compliance engine with standard + custom specs',
   'Barcode generation and printing',
-  'Digital product passports',
+  'Digital pipe passports',
   'Manifest and tally export (PDF + Excel)',
   'Activity logging and audit trail',
   'Role-based access control',
@@ -229,8 +229,8 @@ export default function Pricing() {
               Every deployment starts with understanding how your facility works. Schedule a 30-minute discovery call with our implementation team.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button href="mailto:hello@octg.ai?subject=Demo%20Request" size="xl">
-                Schedule a Demo
+              <Button href="mailto:hello@octg.ai?subject=Discovery%20Call" size="xl">
+                Schedule a Discovery Call
                 <ArrowRight className="w-5 h-5" />
               </Button>
               <a href="mailto:hello@octg.ai" className="text-text-muted hover:text-text dark:hover:text-white transition-colors text-sm font-medium">

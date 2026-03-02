@@ -15,7 +15,7 @@ export default function TrackerExportMockup() {
       hasTable: true,
     },
     {
-      title: 'Product Passport',
+      title: 'Pipe Passport',
       type: 'PDF',
       typeColor: 'bg-[#FEE2E2] text-[#B91C1C] dark:bg-red-900/30 dark:text-red-300',
       lines: 3,

@@ -48,7 +48,7 @@ export default function Navbar() {
                   </div>
                   <div>
                     <div className="font-semibold text-sm text-text">AI Native Pipe Management</div>
-                    <div className="text-xs text-text-muted mt-0.5">Pipe lifecycle management</div>
+                    <div className="text-xs text-text-muted mt-0.5">Inventory, work orders & tally exports</div>
                   </div>
                 </Link>
                 <Link
@@ -60,7 +60,7 @@ export default function Navbar() {
                   </div>
                   <div>
                     <div className="font-semibold text-sm text-text">MTR.AI</div>
-                    <div className="text-xs text-text-muted mt-0.5">AI compliance engine</div>
+                    <div className="text-xs text-text-muted mt-0.5">MTR extraction & spec verification</div>
                   </div>
                 </Link>
                 <Link
@@ -172,7 +172,7 @@ export default function Navbar() {
                 <Package className="w-5 h-5 text-accent" />
                 <div>
                   <div className="font-medium text-sm">AI Native Pipe Management</div>
-                  <div className="text-xs text-text-muted">Pipe lifecycle management</div>
+                  <div className="text-xs text-text-muted">Inventory, work orders & tally exports</div>
                 </div>
               </Link>
               <Link
@@ -183,7 +183,7 @@ export default function Navbar() {
                 <FlaskConical className="w-5 h-5 text-gray-600 dark:text-gray-400" />
                 <div>
                   <div className="font-medium text-sm">MTR.AI</div>
-                  <div className="text-xs text-text-muted">AI compliance engine</div>
+                  <div className="text-xs text-text-muted">MTR extraction & spec verification</div>
                 </div>
               </Link>
               <Link

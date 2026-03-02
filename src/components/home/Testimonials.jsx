@@ -10,12 +10,12 @@ const testimonials = [
   {
     quote: "We went from spending 3 hours on shipping tallies to generating them in 30 seconds. The implementation team understood our workflow from day one.",
     author: 'Operations Manager',
-    company: 'Gulf Coast Coating Facility',
+    company: 'Gulf Coast Coating Facility (200k+ joints/year)',
   },
   {
     quote: 'The MTR compliance engine caught a heat that was marginally out of spec. That\'s the kind of catch that used to require a quality engineer spending half a day with a calculator.',
     author: 'Quality Director',
-    company: 'Permian Basin E&P',
+    company: '50,000 BOE/day E&P Operator, Permian Basin',
   },
 ]
 
@@ -68,7 +68,7 @@ export default function Testimonials() {
 
         <ScrollReveal delay={0.3}>
           <p className="text-center text-text-muted mt-10 text-sm">
-            Join the facilities modernizing their pipe operations
+            Join the coating facilities and yards running on OCTG.AI
           </p>
         </ScrollReveal>
       </div>

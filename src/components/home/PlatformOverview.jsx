@@ -8,11 +8,11 @@ const products = [
   {
     name: 'AI Native Pipe Management',
     tagline: 'See every pipe. Track every stage. Ship with confidence.',
-    description: 'Work order-centric inventory management that matches how your facility actually operates. From receiving to shipping, every pipe has a digital identity.',
+    description: 'Work order-centric inventory management that matches how your facility actually operates. From receiving to load out, every joint has a digital identity.',
     features: [
       'Work order-based tracking with derived status',
       'Barcode generation for Zebra thermal printers',
-      'Digital product passports with full audit trail',
+      'Digital pipe passports with full audit trail',
       'Automated shipping manifests and tally exports',
     ],
     icon: Package,
@@ -22,17 +22,17 @@ const products = [
     iconDefault: 'text-slate-600 dark:text-slate-400 group-hover:text-emerald-500',
     shadowHover: 'hover:shadow-xl hover:shadow-emerald-500/5',
     link: '/tracker',
-    cta: 'See How It Works',
+    cta: 'See Pipe Tracking',
   },
   {
     name: 'MTR.AI',
     tagline: 'Upload a Mill Test Report. Get compliance in seconds.',
-    description: 'AI reads your Mill Test Reports, extracts chemical and mechanical properties, and verifies them against API 5L and custom specifications — automatically.',
+    description: 'AI reads your Mill Test Reports, extracts chemical and mechanical properties, and verifies them against API 5L & 5CT specifications — automatically.',
     features: [
       'AI-powered PDF classification and extraction',
       'Compliance checks against industry standards',
       'Per-heat verification with pass/fail results',
-      'Compliance records linked to product passports',
+      'Compliance records linked to pipe passports',
     ],
     icon: FlaskConical,
     borderColor: '#6366f1',
@@ -41,7 +41,7 @@ const products = [
     iconDefault: 'text-slate-600 dark:text-slate-400 group-hover:text-secondary',
     shadowHover: 'hover:shadow-xl hover:shadow-indigo-500/5',
     link: '/mtr',
-    cta: 'See How It Works',
+    cta: 'See MTR Compliance',
   },
   {
     name: 'VLX Field Intelligence',
@@ -61,7 +61,7 @@ const products = [
     iconDefault: '',
     shadowHover: 'hover:shadow-xl hover:shadow-orange-500/5',
     link: '/field-intelligence',
-    cta: 'See How It Works',
+    cta: 'See Field Evidence',
   },
 ]
 
@@ -72,7 +72,7 @@ export default function PlatformOverview() {
         <SectionHeading
           label="The Platform"
           title="One platform. Complete pipe intelligence."
-          description="OCTG.AI combines inventory tracking, document processing, and compliance verification into a single AI-native platform. Choose what you need — or use everything together."
+          description="OCTG.AI combines pipe inventory management, MTR processing, and API spec compliance into one platform — configured for your operation. Start with what solves your biggest problem."
         />
 
         <div className="grid md:grid-cols-3 gap-6 mt-12">

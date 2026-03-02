@@ -8,11 +8,11 @@ const features = [
   {
     label: 'Inventory Tracking',
     title: 'Your facility thinks in work orders. Now your software does too.',
-    description: "Most pipe software forces you to manage individual pipes. But your operators think in work orders — 'Is WO-2025-003 ready to ship?' AI Native Pipe Management derives work order status automatically from pipe states. No manual status updates. No reconciliation. Just real-time visibility.",
+    description: "Most pipe software forces you to track one joint at a time. But your operators think in work orders — 'Is WO-2025-003 ready to ship?' OCTG.AI derives work order status automatically from pipe states. No manual status updates. No reconciliation. Just real-time visibility.",
     bullets: [
-      'Operations Center dashboard shows what needs attention today — not a wall of 6,000 pipes',
-      'Status flows automatically: receiving → processing → QC → ready to ship → loaded → shipped',
-      'One-click export: manifest PDFs, shipping tallies, or full product passports',
+      'Operations Center dashboard shows what needs attention today — not a wall of 6,000 joints',
+      'Status flows automatically: receiving → blasting → coating → QC → ready for load out → shipped',
+      'One-click export: manifest PDFs, shipping tallies, or full pipe passports',
     ],
     icon: LayoutDashboard,
     color: 'orange',
@@ -20,12 +20,12 @@ const features = [
   },
   {
     label: 'MTR Compliance',
-    title: 'Upload a stack of PDFs. AI does the rest.',
+    title: 'Drop a stack of MTRs. AI does the rest.',
     description: "Clients send advance PDF bundles — MTRs, shipping tallies, cover sheets — all mixed together. MTR.AI classifies every page, extracts pipe data from tallies, pulls chemical and mechanical properties from MTRs, and runs compliance checks against your specs. What used to take your quality team hours now takes minutes.",
     bullets: [
       'AI classifies every page: MTR, tally, cover sheet, or other — with confidence scores',
       "Extracted data creates pipe records automatically with 'expected' status before trucks arrive",
-      'Compliance checks against API 5L specs with parameter-level pass/warning/fail results',
+      'Compliance checks against API 5L & 5CT specs with parameter-level pass/warning/fail results',
     ],
     icon: FileCheck,
     color: 'indigo',
@@ -36,9 +36,9 @@ const features = [
     title: 'Scan a barcode. See everything.',
     description: "Every pipe gets a unique barcode printed on a Zebra thermal label at the final bench. Field operators scan with VLX on their phones — inspection data syncs automatically to inventory. No manual data transfer. No disconnected tallies.",
     bullets: [
-      'Barcode encodes work order, heat number, length, and sequence — parseable by any standard reader',
+      'Barcode encodes work order, heat/lot number, length, and sequence — parseable by any standard reader',
       'VLX mobile inspections at inbound, post-coating, and outbound sync bidirectionally',
-      'Digital product passports combine inventory data, inspection reports, MTRs, and compliance records into one downloadable PDF',
+      'Digital pipe passports combine inventory data, inspection reports, MTRs, and compliance records into one downloadable PDF',
     ],
     icon: Scan,
     color: 'blue',
@@ -55,8 +55,8 @@ function FeatureVisual({ type }) {
           <span className="text-xs font-medium text-text-muted">Operations Center</span>
         </div>
         {[
-          { wo: 'WO-2025-003', status: 'Ready to Ship', color: 'bg-[#F3E8FF] text-[#7E22CE] dark:bg-purple-900/30 dark:text-purple-300', progress: 95 },
-          { wo: 'WO-2025-004', status: 'Processing', color: 'bg-[#FEF3C7] text-[#B45309] dark:bg-amber-900/30 dark:text-amber-300', progress: 60 },
+          { wo: 'WO-2025-003', status: 'Ready for Load Out', color: 'bg-[#F3E8FF] text-[#7E22CE] dark:bg-purple-900/30 dark:text-purple-300', progress: 95 },
+          { wo: 'WO-2025-004', status: 'Coating', color: 'bg-[#FEF3C7] text-[#B45309] dark:bg-amber-900/30 dark:text-amber-300', progress: 60 },
           { wo: 'WO-2025-005', status: 'Receiving', color: 'bg-[#DBEAFE] text-[#1D4ED8] dark:bg-blue-900/30 dark:text-blue-300', progress: 20 },
         ].map((item) => (
           <div key={item.wo} className="flex items-center justify-between py-3 border-b border-border last:border-0">

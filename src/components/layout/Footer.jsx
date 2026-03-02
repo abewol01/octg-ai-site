@@ -13,7 +13,7 @@ export default function Footer() {
               <span className="text-accent">.AI</span>
             </Link>
             <p className="text-text-muted text-sm mt-3 leading-relaxed">
-              AI-native pipe intelligence for oil and gas
+              AI-powered pipe management for the OCTG supply chain
             </p>
           </div>
 
@@ -38,7 +38,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link to="/pricing" className="text-text-muted text-sm hover:text-text dark:hover:text-white transition-colors">
-                  How We Deploy
+                  Implementation & Pricing
                 </Link>
               </li>
               <li>

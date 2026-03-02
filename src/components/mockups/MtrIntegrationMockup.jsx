@@ -5,14 +5,14 @@ export default function MtrIntegrationMockup() {
     <div className="bg-surface rounded-xl border border-border p-5 shadow-sm">
       <div className="flex items-center gap-2 mb-4">
         <div className="w-2 h-2 rounded-full bg-secondary" />
-        <span className="text-xs font-medium text-text-muted">Product Passport</span>
+        <span className="text-xs font-medium text-text-muted">Pipe Passport</span>
       </div>
 
       {/* Mini document */}
       <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden">
         {/* Document header */}
         <div className="bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-700 px-4 py-2.5">
-          <p className="text-[10px] font-bold text-text uppercase tracking-wider">Product Passport</p>
+          <p className="text-[10px] font-bold text-text uppercase tracking-wider">Pipe Passport</p>
           <p className="font-mono text-[10px] text-text-muted">WO-2025-003</p>
         </div>
 

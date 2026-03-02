@@ -8,35 +8,35 @@ import corpacLogo from '../../assets/corpac-logo.webp'
 import tubaceroLogo from '../../assets/tubacero-logo.png'
 
 const stages = [
-  { label: 'Arrival', icon: Truck },
-  { label: 'Processing', icon: Settings },
-  { label: 'QC', icon: SearchCheck },
+  { label: 'Receiving', icon: Truck },
+  { label: 'Blasting', icon: Settings },
   { label: 'Coating', icon: Layers },
-  { label: 'Shipping', icon: PackageCheck },
+  { label: 'QC', icon: SearchCheck },
+  { label: 'Load Out', icon: PackageCheck },
 ]
 
 const statusStages = [
   { text: 'Receiving', color: 'bg-[#DBEAFE] text-[#1D4ED8]' },
-  { text: 'Processing', color: 'bg-[#FEF3C7] text-[#B45309]' },
-  { text: 'QC Complete', color: 'bg-[#F3E8FF] text-[#7E22CE]' },
+  { text: 'Blasting', color: 'bg-[#FEF3C7] text-[#B45309]' },
   { text: 'Coated', color: 'bg-[#FFEDD5] text-[#C2410C]' },
-  { text: 'Ready to Ship', color: 'bg-[#DCFCE7] text-[#15803D]' },
+  { text: 'QC Complete', color: 'bg-[#F3E8FF] text-[#7E22CE]' },
+  { text: 'Ready for Load Out', color: 'bg-[#DCFCE7] text-[#15803D]' },
 ]
 
 const tickerItems = [
-  'AI Document Classification',
+  'Automated MTR Classification',
   'Automated MTR Compliance',
   'VLX Mobile Inspections',
   'Chemical Composition Extraction',
-  'AI-Driven Status Tracking',
-  'Digital Product Passports',
+  'Work Order Status Tracking',
+  'Digital Pipe Passports',
   'VLX Barcode Scanning',
   'Satellite Yard Mapping',
   'One-Click Compliance Checks',
   'Real-Time Pipe Tracking',
   'Automated Tally Generation',
   'VLX Field Inspections',
-  'AI PDF Processing',
+  'Scanned MTR Data Extraction',
   'End-to-End Traceability',
 ]
 
@@ -86,7 +86,7 @@ export default function Hero() {
               transition={{ duration: 0.5 }}
             >
               <span className="inline-block text-xs font-semibold tracking-widest uppercase text-accent mb-4">
-                AI-Native Pipe Intelligence
+                AI-Powered OCTG Management
               </span>
             </motion.div>
 
@@ -106,7 +106,7 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg md:text-xl text-text-muted leading-relaxed mb-8"
             >
-              OCTG.AI is a configurable AI platform that adapts to your facility's exact workflow — from receiving through coating, QC, and shipping. One deployment. Your operation. Full traceability.
+              OCTG.AI tracks every joint from receiving through coating, QC, and load out — configured around your facility's workflow, your specs, and your documentation requirements. Full heat-level traceability.
             </motion.p>
 
             <motion.div
@@ -203,18 +203,26 @@ export default function Hero() {
 
                 {/* Data card below pipeline */}
                 <div className="mt-6 rounded-xl p-5 md:p-6 bg-gray-50 border border-gray-100 dark:bg-white/[0.04] dark:border-white/[0.06]">
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-3 gap-4">
                     <div>
                       <div className="text-[11px] text-slate-500 dark:text-slate-300 font-medium uppercase tracking-wider">Heat #</div>
                       <div className="text-base font-semibold text-slate-900 dark:text-white mt-0.5 font-mono">H-84521</div>
                     </div>
                     <div>
                       <div className="text-[11px] text-slate-500 dark:text-slate-300 font-medium uppercase tracking-wider">Grade</div>
-                      <div className="text-base font-semibold text-slate-900 dark:text-white mt-0.5">API 5L X52</div>
+                      <div className="text-base font-semibold text-slate-900 dark:text-white mt-0.5">API 5CT P110</div>
+                    </div>
+                    <div>
+                      <div className="text-[11px] text-slate-500 dark:text-slate-300 font-medium uppercase tracking-wider">Connection</div>
+                      <div className="text-base font-semibold text-slate-900 dark:text-white mt-0.5">BTC</div>
                     </div>
                     <div>
                       <div className="text-[11px] text-slate-500 dark:text-slate-300 font-medium uppercase tracking-wider">OD × Wall</div>
-                      <div className="text-base font-semibold text-slate-900 dark:text-white mt-0.5">16&quot; × 0.375&quot;</div>
+                      <div className="text-base font-semibold text-slate-900 dark:text-white mt-0.5">9-5/8&quot; × 0.545&quot;</div>
+                    </div>
+                    <div>
+                      <div className="text-[11px] text-slate-500 dark:text-slate-300 font-medium uppercase tracking-wider">Wt/Ft</div>
+                      <div className="text-base font-semibold text-slate-900 dark:text-white mt-0.5">53.50 lb/ft</div>
                     </div>
                     <div>
                       <div className="text-[11px] text-slate-500 dark:text-slate-300 font-medium uppercase tracking-wider">Status</div>

@@ -12,7 +12,7 @@ export default function CtaSection() {
             Ready to modernize your pipe operations?
           </h2>
           <p className="text-text-muted text-lg mb-2">
-            Every deployment starts with a conversation. Tell us about your operation and we'll show you what's possible.
+            Every deployment starts with mapping your yard. Tell us about your operation and we'll show you what's possible.
           </p>
           <p className="text-text-muted text-sm mb-8">
             Custom-configured for your facility. Deployed in weeks, not months.

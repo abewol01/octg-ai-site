@@ -24,28 +24,28 @@ const features = [
     badge: 'Dashboard',
     icon: LayoutDashboard,
     title: 'Operations Center — not just a pipe list',
-    description: "See what's receiving today, what needs attention, and what's ready to ship. Your dashboard is organized around work orders — because that's how you think about your day.",
+    description: "See what's receiving today, what needs attention, and what's ready for load out. Your dashboard is organized around work orders — because that's how you think about your day.",
     visual: <TrackerDashboardMockup />,
   },
   {
     badge: 'Status',
     icon: RefreshCw,
     title: 'Status that updates itself',
-    description: "Pipe status flows automatically from receiving through processing, QC, and shipping. Work order status is derived from pipe states — when all pipes are shipped, the WO is shipped. No manual clicks.",
+    description: "Pipe status flows automatically from receiving through blasting, coating, QC, and load out. Work order status is derived from pipe states — when all joints are shipped, the WO is shipped. No manual clicks.",
     visual: <TrackerStatusMockup />,
   },
   {
     badge: 'Import',
     icon: Upload,
-    title: 'Get pipes into the system in minutes, not hours',
-    description: "Upload an Excel manifest — columns auto-map to pipe fields. Or upload a client's PDF bundle and let AI classify and extract pipe data. Pipes arrive in the system before the truck arrives at your gate.",
+    title: 'Get joints into the system in minutes, not hours',
+    description: "Import an Excel tally — columns auto-map to pipe fields. Or submit a client's PDF bundle and let AI classify and extract pipe data. Joints arrive in the system before the truck arrives at your gate.",
     visual: <TrackerImportMockup />,
   },
   {
     badge: 'Barcode',
     icon: Barcode,
     title: 'Print. Stick. Scan. Done.',
-    description: 'Generate unique barcodes for every pipe at the final bench. Print directly to Zebra thermal printers. Each barcode encodes the work order, heat number, length, and sequence number.',
+    description: 'Generate unique barcodes for every joint at the final bench. Print directly to Zebra thermal printers. Each barcode encodes the work order, heat/lot number, length, and sequence number.',
     visual: <TrackerBarcodeMockup />,
   },
   {
@@ -59,14 +59,14 @@ const features = [
     badge: 'Export',
     icon: FileDown,
     title: 'One click. Complete documentation.',
-    description: 'Generate shipping manifests (PDF), tally spreadsheets (Excel), or full product passports (PDF with cover, tally, MTRs, and inspection reports). Your clients get a professional documentation package.',
+    description: 'Generate shipping manifests, tallies, BOLs, and pipe passports. Export as PDF or Excel. Your clients get a professional documentation package with MTRs, inspection reports, and full traceability.',
     visual: <TrackerExportMockup />,
   },
   {
     badge: 'Mapping',
     icon: Map,
-    title: 'Satellite view of every pipe in your yard',
-    description: 'Mapbox-powered satellite map with custom storage zones. See capacity utilization at a glance. Know exactly where pipes are staged.',
+    title: 'Satellite view of every joint in your yard',
+    description: 'Mapbox-powered satellite map with custom storage zones. See capacity utilization at a glance. Know exactly where joints are staged.',
     visual: <TrackerYardMockup />,
   },
 ]
@@ -74,7 +74,7 @@ const features = [
 const howItWorks = [
   {
     title: 'Discovery',
-    description: 'We map your receiving-to-shipping workflow and identify where time and accuracy are lost.',
+    description: 'We map your receiving-to-load-out workflow and identify where time and accuracy are lost.',
   },
   {
     title: 'Configure',
@@ -96,7 +96,7 @@ export default function Tracker() {
       <ProductHero
         label="AI Native Pipe Management"
         headline="Every pipe. Every stage. One system."
-        subheadline="AI Native Pipe Management is work order-centric inventory management built for how coating facilities, pipe yards, and distributors actually operate."
+        subheadline="Work order-centric pipe management built for how coating facilities, pipe yards, and distributors actually operate. Track every joint from receiving to load out."
       />
 
       {/* Problem section — dark navy */}
@@ -321,14 +321,14 @@ export default function Tracker() {
         <div className="max-w-3xl mx-auto px-6 text-center">
           <ScrollReveal>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-text dark:text-white mb-4">
-              Start managing pipes the modern way
+              Start managing pipe the modern way
             </h2>
             <p className="text-text-muted mb-8">
-              Custom-configured for your facility. Deployed in weeks, not months.
+              Built for your yard. Running in weeks.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="mailto:hello@octg.ai?subject=Demo%20Request" size="xl">
-                Schedule a Demo
+                See Pipe Tracking in Action
                 <ArrowRight className="w-5 h-5" />
               </Button>
               <Button href="mailto:hello@octg.ai?subject=Consultation" variant="secondary" size="xl">

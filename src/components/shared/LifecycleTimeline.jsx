@@ -5,8 +5,8 @@ const lifecycleStages = [
   {
     title: 'Inbound Receiving',
     color: '#06b6d4',
-    description: 'Truck arrives, pipes unloaded and inspected against advance PDFs',
-    evidence: ['Pipe count verification', 'Damage photos', 'Tally reconciliation', 'MTR matching'],
+    description: 'Truck arrives, joints unloaded and inspected against advance PDFs',
+    evidence: ['Joint count verification', 'Damage photos', 'Tally reconciliation', 'Heat/lot matching'],
   },
   {
     title: 'Blasting & Prep',
@@ -35,8 +35,8 @@ const lifecycleStages = [
   {
     title: 'Shipping & Manifest',
     color: '#3b82f6',
-    description: 'Automated manifests, product passports, client deliverables',
-    evidence: ['Pipe manifest CSV', 'Product passport PDF', 'Full audit trail'],
+    description: 'Automated manifests, pipe passports, client deliverables',
+    evidence: ['Pipe manifest CSV', 'Pipe passport PDF', 'Full audit trail'],
   },
 ]
 
