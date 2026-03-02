@@ -2,12 +2,13 @@ import { LayoutDashboard, FileCheck, Scan } from 'lucide-react'
 import SectionHeading from '../shared/SectionHeading'
 import ScrollReveal from '../shared/ScrollReveal'
 import Badge from '../shared/Badge'
+import vlxMark from '../../assets/vlx-mark.png'
 
 const features = [
   {
     label: 'Inventory Tracking',
     title: 'Your facility thinks in work orders. Now your software does too.',
-    description: "Most pipe software forces you to manage individual pipes. But your operators think in work orders — 'Is WO-2025-003 ready to ship?' OCTG Tracker derives work order status automatically from pipe states. No manual status updates. No reconciliation. Just real-time visibility.",
+    description: "Most pipe software forces you to manage individual pipes. But your operators think in work orders — 'Is WO-2025-003 ready to ship?' AI Powered Pipe Management derives work order status automatically from pipe states. No manual status updates. No reconciliation. Just real-time visibility.",
     bullets: [
       'Operations Center dashboard shows what needs attention today — not a wall of 6,000 pipes',
       'Status flows automatically: receiving → processing → QC → ready to ship → loaded → shipped',
@@ -48,22 +49,22 @@ const features = [
 function FeatureVisual({ type }) {
   if (type === 'dashboard') {
     return (
-      <div className="bg-white rounded-xl border border-border p-5 shadow-sm">
+      <div className="bg-surface rounded-xl border border-border p-5 shadow-sm">
         <div className="flex items-center gap-2 mb-4">
           <div className="w-2 h-2 rounded-full bg-success" />
           <span className="text-xs font-medium text-text-muted">Operations Center</span>
         </div>
         {[
-          { wo: 'WO-2025-003', status: 'Ready to Ship', color: 'bg-purple-100 text-purple-700', progress: 95 },
-          { wo: 'WO-2025-004', status: 'Processing', color: 'bg-amber-100 text-amber-700', progress: 60 },
-          { wo: 'WO-2025-005', status: 'Receiving', color: 'bg-blue-100 text-blue-700', progress: 20 },
+          { wo: 'WO-2025-003', status: 'Ready to Ship', color: 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300', progress: 95 },
+          { wo: 'WO-2025-004', status: 'Processing', color: 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300', progress: 60 },
+          { wo: 'WO-2025-005', status: 'Receiving', color: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300', progress: 20 },
         ].map((item) => (
           <div key={item.wo} className="flex items-center justify-between py-3 border-b border-border last:border-0">
             <div className="flex items-center gap-3">
-              <span className="text-sm font-semibold text-primary">{item.wo}</span>
+              <span className="text-sm font-semibold text-text">{item.wo}</span>
               <span className={`text-[11px] font-medium px-2 py-0.5 rounded-full ${item.color}`}>{item.status}</span>
             </div>
-            <div className="w-24 h-1.5 bg-slate-100 rounded-full overflow-hidden">
+            <div className="w-24 h-1.5 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
               <div className="h-full bg-accent rounded-full" style={{ width: `${item.progress}%` }} />
             </div>
           </div>
@@ -74,7 +75,7 @@ function FeatureVisual({ type }) {
 
   if (type === 'mtr') {
     return (
-      <div className="bg-white rounded-xl border border-border p-5 shadow-sm">
+      <div className="bg-surface rounded-xl border border-border p-5 shadow-sm">
         <div className="flex items-center gap-2 mb-4">
           <div className="w-2 h-2 rounded-full bg-secondary" />
           <span className="text-xs font-medium text-text-muted">MTR Compliance Check</span>
@@ -88,7 +89,7 @@ function FeatureVisual({ type }) {
             <div key={row.param} className="flex items-center justify-between text-sm">
               <span className="text-text-muted">{row.param}</span>
               <div className="flex items-center gap-3">
-                <span className="font-mono text-xs text-primary">{row.value}</span>
+                <span className="font-mono text-xs text-text">{row.value}</span>
                 <span className={`w-2 h-2 rounded-full ${
                   row.status === 'pass' ? 'bg-success' :
                   row.status === 'warning' ? 'bg-warning' : 'bg-danger'
@@ -102,17 +103,17 @@ function FeatureVisual({ type }) {
   }
 
   return (
-    <div className="bg-white rounded-xl border border-border p-5 shadow-sm">
+    <div className="bg-surface rounded-xl border border-border p-5 shadow-sm">
       <div className="flex items-center gap-2 mb-4">
         <div className="w-2 h-2 rounded-full bg-info" />
         <span className="text-xs font-medium text-text-muted">VLX Barcode Scan</span>
       </div>
       <div className="text-center py-4">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-slate-50 mb-3">
-          <Scan className="w-8 h-8 text-info" />
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-slate-50 dark:bg-slate-800 mb-3">
+          <img src={vlxMark} alt="VLX" className="w-10 h-10 object-contain" />
         </div>
         <div className="font-mono text-xs text-text-muted mb-2">||||| |||| ||| |||||| ||||</div>
-        <div className="text-sm font-semibold text-primary">WO-2025-003 / H#A1B2C3</div>
+        <div className="text-sm font-semibold text-text">WO-2025-003 / H#A1B2C3</div>
         <div className="text-xs text-text-muted mt-1">42.3 ft · Seq #047</div>
       </div>
     </div>
@@ -136,7 +137,7 @@ export default function FeatureHighlights() {
             >
               <ScrollReveal direction={i % 2 === 0 ? 'left' : 'right'} className={i % 2 === 1 ? 'md:order-2' : ''}>
                 <Badge color={feature.color}>{feature.label}</Badge>
-                <h3 className="font-display text-2xl md:text-3xl font-bold text-primary mt-3 mb-4">
+                <h3 className="font-display text-2xl md:text-3xl font-bold text-text mt-3 mb-4">
                   {feature.title}
                 </h3>
                 <p className="text-text-muted leading-relaxed mb-6">

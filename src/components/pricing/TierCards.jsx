@@ -8,8 +8,8 @@ const pricingData = {
     starter: {
       name: 'Starter',
       tagline: 'Small coating operations or pipe yards getting started with digital tracking.',
-      monthly: 499,
-      annual: 415,
+      monthly: 549,
+      annual: 449,
       features: [
         '1 facility',
         'Up to 3 team members',
@@ -24,8 +24,8 @@ const pricingData = {
     professional: {
       name: 'Professional',
       tagline: 'Mid-size coating facilities, active pipe yards, and operations managing multiple work orders daily.',
-      monthly: 1299,
-      annual: 1079,
+      monthly: 1449,
+      annual: 1199,
       popular: true,
       features: [
         '1 facility',
@@ -61,9 +61,9 @@ const pricingData = {
   tracker: {
     starter: {
       name: 'Starter',
-      tagline: 'Getting started with digital pipe tracking.',
-      monthly: 349,
-      annual: 290,
+      tagline: 'Getting started with AI-powered pipe management.',
+      monthly: 399,
+      annual: 349,
       features: [
         '1 facility, 3 users',
         '2,500 active pipes',
@@ -77,8 +77,8 @@ const pricingData = {
     professional: {
       name: 'Professional',
       tagline: 'Active pipe yards and coating facilities managing multiple work orders daily.',
-      monthly: 899,
-      annual: 749,
+      monthly: 999,
+      annual: 849,
       popular: true,
       features: [
         '1 facility, 10 users',
@@ -108,8 +108,8 @@ const pricingData = {
     starter: {
       name: 'Essentials',
       tagline: 'Quality teams getting started with automated MTR compliance.',
-      monthly: 249,
-      annual: 207,
+      monthly: 299,
+      annual: 249,
       features: [
         '3 users',
         '100 MTR pages/month',
@@ -122,8 +122,8 @@ const pricingData = {
     professional: {
       name: 'Professional',
       tagline: 'Active quality operations with custom compliance requirements.',
-      monthly: 699,
-      annual: 582,
+      monthly: 799,
+      annual: 649,
       popular: true,
       features: [
         '10 users',
@@ -173,31 +173,33 @@ export default function TierCards({ product, billing }) {
             <div
               className={`relative rounded-2xl p-8 h-full flex flex-col ${
                 isPopular
-                  ? 'border-2 border-accent bg-white shadow-xl scale-[1.02]'
-                  : 'border border-border bg-white'
+                  ? 'border-2 border-accent bg-surface shadow-xl dark:shadow-black/30 scale-[1.02]'
+                  : 'border border-border bg-surface'
               }`}
             >
               {isPopular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <Badge color="orange">Most Popular</Badge>
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
+                  <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-semibold bg-accent text-white shadow-sm whitespace-nowrap">
+                    Most Popular
+                  </span>
                 </div>
               )}
 
               <div className="mb-6">
-                <h3 className="font-display text-xl font-bold text-primary">{data.name}</h3>
+                <h3 className="font-display text-xl font-bold text-text">{data.name}</h3>
                 <p className="text-sm text-text-muted mt-1">{data.tagline}</p>
               </div>
 
               <div className="mb-6">
                 {isEnterprise ? (
                   <div>
-                    <span className="font-display text-4xl font-bold text-primary">Custom</span>
+                    <span className="font-display text-4xl font-bold text-text">Custom</span>
                     <p className="text-sm text-text-muted mt-1">Tailored to your operation</p>
                   </div>
                 ) : (
                   <div>
                     <div className="flex items-baseline gap-1">
-                      <span className="font-display text-4xl font-bold text-primary">
+                      <span className="font-display text-4xl font-bold text-text">
                         ${formatPrice(price)}
                       </span>
                       <span className="text-text-muted text-sm">/month</span>

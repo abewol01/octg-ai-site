@@ -15,7 +15,7 @@ export default function ProductFeatures({ features, accentColor = 'orange' }) {
               className={i % 2 === 1 ? 'md:order-2' : ''}
             >
               <Badge color={accentColor}>{feature.badge || `Feature ${i + 1}`}</Badge>
-              <h3 className="font-display text-2xl md:text-3xl font-bold text-primary mt-3 mb-4">
+              <h3 className="font-display text-2xl md:text-3xl font-bold text-text mt-3 mb-4">
                 {feature.title}
               </h3>
               <p className="text-text-muted leading-relaxed">
@@ -31,8 +31,8 @@ export default function ProductFeatures({ features, accentColor = 'orange' }) {
               {feature.visual ? (
                 feature.visual
               ) : (
-                <div className="bg-white border border-border rounded-xl p-6 shadow-sm">
-                  <div className={`w-full h-48 rounded-lg ${accentColor === 'cyan' ? 'bg-cyan-50' : 'bg-orange-50'} flex items-center justify-center`}>
+                <div className="bg-surface border border-border rounded-xl p-6 shadow-sm">
+                  <div className={`w-full h-48 rounded-lg ${accentColor === 'cyan' ? 'bg-cyan-50 dark:bg-cyan-900/20' : 'bg-orange-50 dark:bg-orange-900/20'} flex items-center justify-center`}>
                     <div className="text-center">
                       <feature.icon className={`w-10 h-10 mx-auto mb-2 ${accentColor === 'cyan' ? 'text-secondary' : 'text-accent'}`} />
                       <span className="text-sm text-text-muted">{feature.title}</span>

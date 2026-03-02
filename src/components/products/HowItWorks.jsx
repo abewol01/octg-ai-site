@@ -22,10 +22,10 @@ export default function HowItWorks({ steps, accentColor = 'orange' }) {
                   <div className="hidden lg:block absolute top-8 left-[calc(50%+32px)] w-[calc(100%-32px)] h-0.5 bg-border" />
                 )}
                 <div className="text-center">
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl ${accentColor === 'cyan' ? 'bg-cyan-100' : 'bg-orange-100'} mb-4`}>
+                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl ${accentColor === 'cyan' ? 'bg-cyan-100 dark:bg-cyan-900/30' : 'bg-orange-100 dark:bg-orange-900/30'} mb-4`}>
                     <span className={`font-display text-2xl font-bold ${numColor}`}>{i + 1}</span>
                   </div>
-                  <h3 className="font-display text-lg font-bold text-primary mb-2">{step.title}</h3>
+                  <h3 className="font-display text-lg font-bold text-text mb-2">{step.title}</h3>
                   <p className="text-sm text-text-muted leading-relaxed">{step.description}</p>
                 </div>
               </div>

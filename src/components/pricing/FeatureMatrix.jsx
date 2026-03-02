@@ -77,7 +77,7 @@ const categories = [
 function CellValue({ value }) {
   if (value === true) return <Check className="w-5 h-5 text-success mx-auto" />
   if (value === false) return <Minus className="w-4 h-4 text-slate-300 mx-auto" />
-  return <span className="text-sm font-medium text-primary">{value}</span>
+  return <span className="text-sm font-medium text-text">{value}</span>
 }
 
 export default function FeatureMatrix() {
@@ -108,10 +108,10 @@ export default function FeatureMatrix() {
           <div className="mt-8 border border-border rounded-2xl overflow-hidden">
             {/* Header row */}
             <div className="grid grid-cols-4 bg-surface-alt border-b border-border">
-              <div className="p-4 font-semibold text-sm text-primary">Feature</div>
-              <div className="p-4 text-center font-semibold text-sm text-primary">Starter</div>
-              <div className="p-4 text-center font-semibold text-sm text-primary bg-accent/5">Professional</div>
-              <div className="p-4 text-center font-semibold text-sm text-primary">Enterprise</div>
+              <div className="p-4 font-semibold text-sm text-text">Feature</div>
+              <div className="p-4 text-center font-semibold text-sm text-text">Starter</div>
+              <div className="p-4 text-center font-semibold text-sm text-text bg-accent/5">Professional</div>
+              <div className="p-4 text-center font-semibold text-sm text-text">Enterprise</div>
             </div>
 
             {categories.map((category) => (
@@ -121,7 +121,7 @@ export default function FeatureMatrix() {
                   onClick={() => toggleCategory(category.name)}
                   className="w-full flex items-center justify-between p-4 bg-surface-alt/50 border-b border-border hover:bg-surface-alt transition-colors cursor-pointer"
                 >
-                  <span className="font-semibold text-sm text-primary">{category.name}</span>
+                  <span className="font-semibold text-sm text-text">{category.name}</span>
                   <ChevronDown className={`w-4 h-4 text-text-muted transition-transform ${openCategories.has(category.name) ? 'rotate-180' : ''}`} />
                 </button>
 

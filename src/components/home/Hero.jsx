@@ -1,6 +1,10 @@
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import Button from '../shared/Button'
+import vlxLogo from '../../assets/vlx-logo.png'
+import pipeExchangeLogo from '../../assets/pipe-exchange-logo.png'
+import corpacLogo from '../../assets/corpac-logo.webp'
+import tubaceroLogo from '../../assets/tubacero-logo.png'
 
 export default function Hero() {
   return (
@@ -28,7 +32,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary leading-[1.1] mb-6"
+            className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-text leading-[1.1] mb-6"
           >
             Your pipe operations are buried in spreadsheets.{' '}
             <span className="text-accent">We built the way out.</span>
@@ -66,7 +70,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.5 }}
           className="mt-16 md:mt-20"
         >
-          <div className="relative bg-white border border-border rounded-2xl shadow-xl p-8 overflow-hidden">
+          <div className="relative bg-surface border border-border rounded-2xl shadow-xl dark:shadow-black/30 p-8 overflow-hidden">
             {/* Abstract pipeline visualization */}
             <div className="flex items-center justify-between gap-4 overflow-x-auto pb-2">
               {[
@@ -116,7 +120,7 @@ export default function Hero() {
                   className="bg-surface-alt rounded-lg p-3"
                 >
                   <div className="text-[11px] text-text-muted font-medium uppercase tracking-wider">{item.label}</div>
-                  <div className={`text-sm font-semibold mt-0.5 ${item.color || 'text-primary'}`}>{item.value}</div>
+                  <div className={`text-sm font-semibold mt-0.5 ${item.color || 'text-text'}`}>{item.value}</div>
                 </motion.div>
               ))}
             </div>
@@ -133,10 +137,11 @@ export default function Hero() {
           <p className="text-sm text-text-muted mb-6">
             Trusted by coating facilities and pipe operations across the Gulf Coast
           </p>
-          <div className="flex items-center justify-center gap-10 opacity-40">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="w-24 h-8 bg-slate-200 rounded" />
-            ))}
+          <div className="flex items-center justify-center gap-10 md:gap-14 flex-wrap">
+            <img src={vlxLogo} alt="VLX" className="h-6 md:h-7 opacity-40 hover:opacity-70 transition-opacity dark:brightness-0 dark:invert" />
+            <img src={pipeExchangeLogo} alt="Pipe Exchange" className="h-6 md:h-7 opacity-40 hover:opacity-70 transition-opacity dark:brightness-0 dark:invert" />
+            <img src={corpacLogo} alt="Corpac" className="h-6 md:h-7 opacity-40 hover:opacity-70 transition-opacity dark:brightness-0 dark:invert" />
+            <img src={tubaceroLogo} alt="Tubacero" className="h-7 md:h-8 opacity-40 hover:opacity-70 transition-opacity dark:brightness-0 dark:invert" />
           </div>
         </motion.div>
       </div>

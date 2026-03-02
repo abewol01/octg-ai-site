@@ -1,5 +1,10 @@
 import { Quote } from 'lucide-react'
 import ScrollReveal from '../shared/ScrollReveal'
+import SectionHeading from '../shared/SectionHeading'
+import vlxLogo from '../../assets/vlx-logo.png'
+import pipeExchangeLogo from '../../assets/pipe-exchange-logo.png'
+import corpacLogo from '../../assets/corpac-logo.webp'
+import tubaceroLogo from '../../assets/tubacero-logo.png'
 
 const testimonials = [
   {
@@ -14,20 +19,46 @@ const testimonials = [
   },
 ]
 
+const logos = [
+  { src: vlxLogo, alt: 'VLX' },
+  { src: pipeExchangeLogo, alt: 'Pipe Exchange' },
+  { src: corpacLogo, alt: 'Corpac' },
+  { src: tubaceroLogo, alt: 'Tubacero' },
+]
+
 export default function Testimonials() {
   return (
     <section className="py-24">
       <div className="max-w-7xl mx-auto px-6">
+        <SectionHeading
+          label="Testimonials"
+          title="Trusted across the pipe supply chain"
+        />
+
+        {/* Customer logo strip */}
+        <ScrollReveal>
+          <div className="flex items-center justify-center gap-10 md:gap-14 flex-wrap mt-10 mb-14">
+            {logos.map((logo) => (
+              <img
+                key={logo.alt}
+                src={logo.src}
+                alt={logo.alt}
+                className="h-7 md:h-8 object-contain opacity-40 hover:opacity-70 transition-opacity dark:brightness-0 dark:invert"
+              />
+            ))}
+          </div>
+        </ScrollReveal>
+
         <div className="grid md:grid-cols-2 gap-8">
           {testimonials.map((t, i) => (
             <ScrollReveal key={t.author} delay={i * 0.15}>
-              <div className="bg-white border border-border rounded-2xl p-8 h-full">
+              <div className="bg-surface border border-border rounded-2xl p-8 h-full">
                 <Quote className="w-8 h-8 text-accent/30 mb-4" />
-                <blockquote className="text-lg text-primary leading-relaxed mb-6">
+                <blockquote className="text-lg text-text leading-relaxed mb-6">
                   &ldquo;{t.quote}&rdquo;
                 </blockquote>
                 <div>
-                  <div className="font-semibold text-sm text-primary">{t.author}</div>
+                  <div className="font-semibold text-sm text-text">{t.author}</div>
                   <div className="text-sm text-text-muted">{t.company}</div>
                 </div>
               </div>

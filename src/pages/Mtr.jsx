@@ -9,6 +9,12 @@ import SectionHeading from '../components/shared/SectionHeading'
 import ScrollReveal from '../components/shared/ScrollReveal'
 import Badge from '../components/shared/Badge'
 import Button from '../components/shared/Button'
+import MtrClassificationMockup from '../components/mockups/MtrClassificationMockup'
+import MtrExtractionMockup from '../components/mockups/MtrExtractionMockup'
+import MtrSpecsMockup from '../components/mockups/MtrSpecsMockup'
+import MtrComplianceMockup from '../components/mockups/MtrComplianceMockup'
+import MtrHeatVerificationMockup from '../components/mockups/MtrHeatVerificationMockup'
+import MtrIntegrationMockup from '../components/mockups/MtrIntegrationMockup'
 
 const features = [
   {
@@ -16,36 +22,42 @@ const features = [
     icon: FileSearch,
     title: 'AI reads MTRs like your best quality engineer',
     description: "Upload a stack of mixed PDFs — MTRs, tallies, cover sheets, all jumbled together. AI classifies every page with confidence scores. No pre-sorting required.",
+    visual: <MtrClassificationMockup />,
   },
   {
     badge: 'Extraction',
     icon: Database,
     title: 'From scanned PDF to structured data',
     description: 'Chemical composition (C, Mn, P, S, Cr, Mo, V, Nb, Ti...), mechanical properties (yield strength, tensile strength, elongation, hardness), and pipe identification data — all extracted automatically.',
+    visual: <MtrExtractionMockup />,
   },
   {
     badge: 'Specs',
     icon: Settings,
     title: 'Your specs. Your rules.',
     description: 'Pre-loaded with API 5L standards (Grade B through X65, PSL1 and PSL2). Add your own custom specs for project-specific requirements. Define min/max ranges, required parameters, and warning thresholds.',
+    visual: <MtrSpecsMockup />,
   },
   {
     badge: 'Compliance',
     icon: ShieldCheck,
     title: 'Pass. Warning. Fail. For every parameter.',
     description: "Each extracted value is checked against the assigned spec. Results are parameter-level: carbon content pass, yield strength warning (within 10% of boundary), phosphorus fail (exceeds maximum). Visual range bars show exactly where each value falls.",
+    visual: <MtrComplianceMockup />,
   },
   {
     badge: 'Verification',
     icon: Layers,
     title: "Compliance grouped by heat — because that's how MTRs work",
     description: "Results are organized by heat number. One heat can have 50 pipes. Check the heat once, apply to all. Expandable views show every parameter with its extracted value, spec range, and result.",
+    visual: <MtrHeatVerificationMockup />,
   },
   {
     badge: 'Integration',
     icon: Link2,
     title: 'Compliance records live on the pipe, not in a folder',
-    description: 'When MTR.AI is used with OCTG Tracker, compliance status appears on every pipe, every work order, and every product passport. No separate filing system needed.',
+    description: 'When MTR.AI is used with AI Powered Pipe Management, compliance status appears on every pipe, every work order, and every product passport. No separate filing system needed.',
+    visual: <MtrIntegrationMockup />,
   },
 ]
 
@@ -95,14 +107,14 @@ export default function Mtr() {
           />
           <div className="max-w-3xl mx-auto mt-8 space-y-4">
             <ScrollReveal>
-              <div className="bg-white border border-border rounded-xl p-6">
+              <div className="bg-surface border border-border rounded-xl p-6">
                 <p className="text-text-muted leading-relaxed">
                   Every MTR that arrives gets manually reviewed: find the heat number, cross-reference the spec, check each parameter against the range, flag anything marginal.
                 </p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <div className="bg-white border border-border rounded-xl p-6">
+              <div className="bg-surface border border-border rounded-xl p-6">
                 <p className="text-text-muted leading-relaxed">
                   It&apos;s tedious, error-prone, and doesn&apos;t scale. One missed parameter can mean non-conforming pipe in the field.
                 </p>
@@ -130,7 +142,7 @@ export default function Mtr() {
                   className={i % 2 === 1 ? 'md:order-2' : ''}
                 >
                   <Badge color="cyan">{feature.badge}</Badge>
-                  <h3 className="font-display text-2xl md:text-3xl font-bold text-primary mt-3 mb-4">
+                  <h3 className="font-display text-2xl md:text-3xl font-bold text-text mt-3 mb-4">
                     {feature.title}
                   </h3>
                   <p className="text-text-muted leading-relaxed">{feature.description}</p>
@@ -141,11 +153,7 @@ export default function Mtr() {
                   delay={0.15}
                   className={i % 2 === 1 ? 'md:order-1' : ''}
                 >
-                  <div className="bg-white border border-border rounded-xl p-6 shadow-sm">
-                    <div className="w-full h-48 rounded-lg bg-cyan-50 flex items-center justify-center">
-                      <feature.icon className="w-12 h-12 text-secondary" />
-                    </div>
-                  </div>
+                  {feature.visual}
                 </ScrollReveal>
               </div>
             ))}
@@ -163,7 +171,7 @@ export default function Mtr() {
             title="Specs included out of the box"
           />
           <ScrollReveal>
-            <div className="max-w-2xl mx-auto mt-8 bg-white border border-border rounded-2xl p-8">
+            <div className="max-w-2xl mx-auto mt-8 bg-surface border border-border rounded-2xl p-8">
               <ul className="space-y-3">
                 {specs.map((spec) => (
                   <li key={spec} className="flex items-center gap-3 text-sm">

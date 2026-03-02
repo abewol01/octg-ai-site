@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import vlxLogo from '../../assets/vlx-logo.png'
 
 export default function Footer() {
   return (
@@ -22,7 +23,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               <li>
                 <Link to="/tracker" className="text-slate-400 text-sm hover:text-white transition-colors">
-                  OCTG Tracker
+                  AI Powered Pipe Management
                 </Link>
               </li>
               <li>
@@ -68,13 +69,13 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-12 pt-8 border-t border-slate-800 dark:border-slate-700 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-slate-500 text-xs">
             &copy; 2026 OCTG.AI. All rights reserved.
           </p>
           <div className="flex items-center gap-2 text-slate-500 text-xs">
             <span>Powered by</span>
-            <span className="font-semibold text-accent">VLX</span>
+            <img src={vlxLogo} alt="VLX — Verify Then Trust" className="h-5 brightness-0 invert opacity-70" />
           </div>
         </div>
       </div>

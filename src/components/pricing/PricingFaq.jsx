@@ -29,8 +29,8 @@ const faqs = [
     a: 'The 14-day trial gives you access to Professional-tier features with usage limits (500 pipes, 50 MTR pages, 25 compliance checks). No credit card required. At the end of the trial, your account becomes read-only — upgrade to any paid plan to continue. All data is preserved.',
   },
   {
-    q: 'Can I use MTR.AI without the inventory tracker?',
-    a: 'Yes. MTR.AI is available as a standalone product. You can upload MTRs, run compliance checks, and manage specs without using the inventory tracking features. If you decide to add tracking later, your MTR data carries over seamlessly.',
+    q: 'Can I use MTR.AI without Pipe Management?',
+    a: 'Yes. MTR.AI is available as a standalone product. You can upload MTRs, run compliance checks, and manage specs without using the pipe management features. If you decide to add management later, your MTR data carries over seamlessly.',
   },
   {
     q: 'What compliance standards are supported?',
@@ -73,7 +73,7 @@ export default function PricingFaq() {
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 className="w-full flex items-center justify-between p-5 text-left hover:bg-surface-alt transition-colors cursor-pointer"
               >
-                <span className="font-semibold text-sm text-primary pr-4">{faq.q}</span>
+                <span className="font-semibold text-sm text-text pr-4">{faq.q}</span>
                 <ChevronDown
                   className={`w-5 h-5 text-text-muted shrink-0 transition-transform ${
                     openIndex === i ? 'rotate-180' : ''

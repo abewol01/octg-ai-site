@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom'
 
 const variants = {
   primary: 'bg-accent hover:bg-accent-hover text-white shadow-sm hover:shadow-md',
-  secondary: 'border border-primary text-primary hover:bg-primary hover:text-white',
-  ghost: 'text-primary hover:text-accent',
+  secondary: 'border border-border text-text hover:bg-text hover:text-surface',
+  ghost: 'text-text hover:text-accent',
   outline: 'border border-border text-text hover:border-accent hover:text-accent',
 }
 

@@ -1,6 +1,7 @@
 import { ArrowRight } from 'lucide-react'
 import Button from '../shared/Button'
 import ScrollReveal from '../shared/ScrollReveal'
+import vlxLogo from '../../assets/vlx-logo.png'
 
 export default function CtaSection() {
   return (
@@ -26,6 +27,11 @@ export default function CtaSection() {
             >
               Schedule a Demo
             </Button>
+          </div>
+
+          <div className="flex items-center justify-center gap-2 mt-12 opacity-40">
+            <span className="text-slate-400 text-xs">Powered by</span>
+            <img src={vlxLogo} alt="VLX" className="h-4 brightness-0 invert" />
           </div>
         </ScrollReveal>
       </div>

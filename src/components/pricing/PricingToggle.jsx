@@ -8,7 +8,7 @@ export default function PricingToggle({
 }) {
   const products = [
     { key: 'platform', label: 'Platform' },
-    { key: 'tracker', label: 'Tracker Only' },
+    { key: 'tracker', label: 'Management Only' },
     { key: 'mtr', label: 'MTR.AI Only' },
   ]
 
@@ -22,8 +22,8 @@ export default function PricingToggle({
             onClick={() => setProduct(p.key)}
             className={`px-5 py-2.5 rounded-lg text-sm font-medium transition-all cursor-pointer ${
               product === p.key
-                ? 'bg-white text-primary shadow-sm'
-                : 'text-text-muted hover:text-primary'
+                ? 'bg-surface text-text shadow-sm'
+                : 'text-text-muted hover:text-text'
             }`}
           >
             {p.label}
@@ -33,22 +33,22 @@ export default function PricingToggle({
 
       {/* Billing toggle */}
       <div className="flex items-center gap-3">
-        <span className={`text-sm font-medium ${billing === 'monthly' ? 'text-primary' : 'text-text-muted'}`}>
+        <span className={`text-sm font-medium ${billing === 'monthly' ? 'text-text' : 'text-text-muted'}`}>
           Monthly
         </span>
         <button
           onClick={() => setBilling(billing === 'monthly' ? 'annual' : 'monthly')}
-          className={`relative w-12 h-6 rounded-full transition-colors cursor-pointer ${
-            billing === 'annual' ? 'bg-accent' : 'bg-slate-300'
+          className={`relative shrink-0 w-12 h-6 p-0 border-0 rounded-full transition-colors duration-200 cursor-pointer focus:outline-none ${
+            billing === 'annual' ? 'bg-accent' : 'bg-slate-300 dark:bg-slate-600'
           }`}
         >
           <span
-            className={`absolute top-0.5 w-5 h-5 rounded-full bg-white shadow transition-transform ${
-              billing === 'annual' ? 'translate-x-6' : 'translate-x-0.5'
+            className={`absolute top-0.5 left-0.5 w-5 h-5 rounded-full bg-white shadow-sm transition-transform duration-200 ${
+              billing === 'annual' ? 'translate-x-6' : 'translate-x-0'
             }`}
           />
         </button>
-        <span className={`text-sm font-medium ${billing === 'annual' ? 'text-primary' : 'text-text-muted'}`}>
+        <span className={`text-sm font-medium ${billing === 'annual' ? 'text-text' : 'text-text-muted'}`}>
           Annual
         </span>
         {billing === 'annual' && <Badge color="green">Save 17%</Badge>}

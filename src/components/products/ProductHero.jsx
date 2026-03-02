@@ -24,7 +24,7 @@ export default function ProductHero({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary leading-[1.1] mb-6"
+            className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-text leading-[1.1] mb-6"
           >
             {headline}
           </motion.h1>

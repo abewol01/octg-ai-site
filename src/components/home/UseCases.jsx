@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Factory, Warehouse, Droplets, ClipboardCheck, Building2 } from 'lucide-react'
 import SectionHeading from '../shared/SectionHeading'
 import ScrollReveal from '../shared/ScrollReveal'
+import vlxMark from '../../assets/vlx-mark.png'
 
 const verticals = [
   {
@@ -25,6 +26,7 @@ const verticals = [
   {
     name: 'Inspection Companies',
     icon: ClipboardCheck,
+    vlx: true,
     description: "VLX-powered field inspections feed directly into OCTG.AI. Your inspection data doesn't just live in a report — it becomes part of the pipe's permanent digital record. Deliver more value to your clients.",
     features: ['VLX mobile inspections', 'Bidirectional sync', 'Inspection report integration', 'Digital passports'],
   },
@@ -60,7 +62,7 @@ export default function UseCases() {
                   className={`flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium transition-all cursor-pointer ${
                     active === i
                       ? 'bg-primary text-white shadow-md'
-                      : 'bg-white border border-border text-text-muted hover:border-primary hover:text-primary'
+                      : 'bg-surface border border-border text-text-muted hover:border-text hover:text-text'
                   }`}
                 >
                   <v.icon className="w-4 h-4" />
@@ -70,20 +72,27 @@ export default function UseCases() {
             </div>
 
             {/* Content */}
-            <div className="bg-white border border-border rounded-2xl p-8 md:p-10">
+            <div className="bg-surface border border-border rounded-2xl p-8 md:p-10">
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
-                    <current.icon className="w-7 h-7 text-accent" />
+                    {current.vlx ? (
+                      <img src={vlxMark} alt="VLX" className="w-8 h-8 object-contain" />
+                    ) : (
+                      <current.icon className="w-7 h-7 text-accent" />
+                    )}
                   </div>
-                  <h3 className="font-display text-xl font-bold text-primary mb-3">{current.name}</h3>
+                  <h3 className="font-display text-xl font-bold text-text mb-3">{current.name}</h3>
                   <p className="text-text-muted leading-relaxed">{current.description}</p>
                 </div>
                 <div className="flex items-center">
                   <div className="grid grid-cols-2 gap-3 w-full">
                     {current.features.map((feature) => (
-                      <div key={feature} className="bg-surface-alt rounded-lg p-4">
-                        <span className="text-sm font-medium text-primary">{feature}</span>
+                      <div key={feature} className="bg-surface-alt rounded-lg p-4 flex items-center gap-2">
+                        {feature.startsWith('VLX') && (
+                          <img src={vlxMark} alt="VLX" className="w-4 h-4 object-contain shrink-0" />
+                        )}
+                        <span className="text-sm font-medium text-text">{feature}</span>
                       </div>
                     ))}
                   </div>

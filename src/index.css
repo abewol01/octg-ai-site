@@ -23,6 +23,20 @@
   --color-info: #3B82F6;
 }
 
+/* Dark mode variable overrides */
+.dark {
+  --color-primary: #020617;
+  --color-primary-light: #0F172A;
+  --color-surface: #0F172A;
+  --color-surface-alt: #1E293B;
+  --color-border: #334155;
+  --color-text: #F1F5F9;
+  --color-text-muted: #94A3B8;
+  --color-text-inverse: #0F172A;
+  --color-accent-light: #431407;
+  --color-secondary-light: #164E63;
+}
+
 body {
   margin: 0;
   font-family: var(--font-body);
@@ -30,6 +44,7 @@ body {
   background: var(--color-surface);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -41,6 +56,13 @@ h1, h2, h3, h4, h5, h6 {
   background-image:
     linear-gradient(rgba(15, 23, 42, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.dark .bg-blueprint {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
