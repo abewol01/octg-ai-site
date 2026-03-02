@@ -2,11 +2,11 @@ import { Sparkles } from 'lucide-react'
 
 export default function MtrClassificationMockup() {
   const pages = [
-    { label: 'MTR', color: 'bg-cyan-100 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-300', confidence: 98 },
-    { label: 'MTR', color: 'bg-cyan-100 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-300', confidence: 95 },
-    { label: 'Tally', color: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300', confidence: 97 },
+    { label: 'MTR', color: 'bg-[#E0E7FF] text-[#4338CA] dark:bg-indigo-900/30 dark:text-indigo-300', confidence: 98 },
+    { label: 'MTR', color: 'bg-[#E0E7FF] text-[#4338CA] dark:bg-indigo-900/30 dark:text-indigo-300', confidence: 95 },
+    { label: 'Tally', color: 'bg-[#DBEAFE] text-[#1D4ED8] dark:bg-blue-900/30 dark:text-blue-300', confidence: 97 },
     { label: 'Cover', color: 'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400', confidence: 92 },
-    { label: 'MTR', color: 'bg-cyan-100 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-300', confidence: 96 },
+    { label: 'MTR', color: 'bg-[#E0E7FF] text-[#4338CA] dark:bg-indigo-900/30 dark:text-indigo-300', confidence: 96 },
     { label: 'Other', color: 'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400', confidence: 88 },
   ]
 

@@ -34,7 +34,7 @@ export default function MtrSpecsMockup() {
             <div className="flex items-center gap-2">
               <span className="font-mono text-[11px] font-medium text-text">{param.range}</span>
               {param.custom && (
-                <span className="text-[8px] font-bold px-1.5 py-0.5 rounded bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300">
+                <span className="text-[8px] font-bold px-1.5 py-0.5 rounded bg-[#FEF3C7] text-[#B45309] dark:bg-amber-900/30 dark:text-amber-300">
                   Custom
                 </span>
               )}

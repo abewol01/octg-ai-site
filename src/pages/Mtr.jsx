@@ -56,7 +56,7 @@ const features = [
     badge: 'Integration',
     icon: Link2,
     title: 'Compliance records live on the pipe, not in a folder',
-    description: 'When MTR.AI is used with AI Powered Pipe Management, compliance status appears on every pipe, every work order, and every product passport. No separate filing system needed.',
+    description: 'When MTR.AI is used with AI Native Pipe Management, compliance status appears on every pipe, every work order, and every product passport. No separate filing system needed.',
     visual: <MtrIntegrationMockup />,
   },
 ]
@@ -68,15 +68,15 @@ const howItWorks = [
   },
   {
     title: 'Extract',
-    description: 'Chemical and mechanical properties are pulled from each MTR page automatically.',
+    description: 'AI pulls chemical and mechanical properties from each MTR page automatically.',
   },
   {
-    title: 'Assign Spec',
-    description: 'Choose from API 5L standards or your custom specs. AI suggests the best match.',
+    title: 'Configure Specs',
+    description: 'We load your project-specific specifications alongside API 5L standards.',
   },
   {
-    title: 'Check',
-    description: 'One click runs compliance across all heats. Results show pass/warning/fail for every parameter.',
+    title: 'Verify',
+    description: 'One-click compliance across all heats with your custom thresholds.',
   },
 ]
 
@@ -141,7 +141,7 @@ export default function Mtr() {
                   direction={i % 2 === 0 ? 'left' : 'right'}
                   className={i % 2 === 1 ? 'md:order-2' : ''}
                 >
-                  <Badge color="cyan">{feature.badge}</Badge>
+                  <Badge color="indigo">{feature.badge}</Badge>
                   <h3 className="font-display text-2xl md:text-3xl font-bold text-text mt-3 mb-4">
                     {feature.title}
                   </h3>
@@ -161,7 +161,7 @@ export default function Mtr() {
         </div>
       </section>
 
-      <HowItWorks steps={howItWorks} accentColor="cyan" />
+      <HowItWorks steps={howItWorks} accentColor="indigo" />
 
       {/* Specs list */}
       <section className="py-24">
@@ -186,22 +186,22 @@ export default function Mtr() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-primary">
+      <section className="py-24 bg-surface-alt dark:bg-primary">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <ScrollReveal>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-text dark:text-white mb-4">
               Stop checking MTRs by hand
             </h2>
-            <p className="text-slate-300 mb-8">
-              14-day free trial. No credit card required.
+            <p className="text-text-muted mb-8">
+              Custom-configured for your facility. Deployed in weeks, not months.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="https://app.octg.ai/signup" size="xl">
-                Start Free Trial
+              <Button href="mailto:hello@octg.ai?subject=Demo%20Request" size="xl">
+                Schedule a Demo
                 <ArrowRight className="w-5 h-5" />
               </Button>
-              <Button to="/pricing" variant="secondary" size="xl" className="!border-slate-600 !text-white hover:!bg-slate-800">
-                See Pricing
+              <Button href="mailto:hello@octg.ai?subject=Consultation" variant="secondary" size="xl">
+                Talk to Our Team
               </Button>
             </div>
           </ScrollReveal>

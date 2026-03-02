@@ -37,7 +37,7 @@ export default function TrackerScanMockup() {
               </div>
               <div>
                 <span className="text-[9px] text-slate-400 dark:text-slate-500 uppercase tracking-wider">Status</span>
-                <span className="block mt-0.5 text-[10px] font-medium px-2 py-0.5 rounded-full bg-cyan-100 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-300 w-fit">
+                <span className="block mt-0.5 text-[10px] font-medium px-2 py-0.5 rounded-full bg-[#E0E7FF] text-[#4338CA] dark:bg-indigo-900/30 dark:text-indigo-300 w-fit">
                   Post-Coating QC
                 </span>
               </div>

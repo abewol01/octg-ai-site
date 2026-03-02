@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
@@ -9,8 +10,8 @@
   --color-accent: #F97316;
   --color-accent-hover: #EA580C;
   --color-accent-light: #FFF7ED;
-  --color-secondary: #06B6D4;
-  --color-secondary-light: #ECFEFF;
+  --color-secondary: #6366F1;
+  --color-secondary-light: #EEF2FF;
   --color-surface: #FFFFFF;
   --color-surface-alt: #F8FAFC;
   --color-border: #E2E8F0;
@@ -23,18 +24,18 @@
   --color-info: #3B82F6;
 }
 
-/* Dark mode variable overrides */
+/* Dark mode — layered depth palette */
 .dark {
-  --color-primary: #020617;
-  --color-primary-light: #0F172A;
-  --color-surface: #0F172A;
-  --color-surface-alt: #1E293B;
-  --color-border: #334155;
+  --color-primary: #0B0F1A;
+  --color-primary-light: #111827;
+  --color-surface: #0B0F1A;
+  --color-surface-alt: #111827;
+  --color-border: #1E293B;
   --color-text: #F1F5F9;
   --color-text-muted: #94A3B8;
-  --color-text-inverse: #0F172A;
+  --color-text-inverse: #0B0F1A;
   --color-accent-light: #431407;
-  --color-secondary-light: #164E63;
+  --color-secondary-light: #312E81;
 }
 
 body {
@@ -61,8 +62,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .dark .bg-blueprint {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
@@ -73,6 +74,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-divider-reverse {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 40px));
+}
+
+/* Partner logos — dark on light, white on dark */
+.logo-partner {
+  filter: grayscale(1) brightness(0);
+}
+.dark .logo-partner {
+  filter: grayscale(1) brightness(0) invert(1);
 }
 
 /* Smooth scrolling */

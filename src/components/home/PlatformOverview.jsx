@@ -5,7 +5,7 @@ import ScrollReveal from '../shared/ScrollReveal'
 
 const products = [
   {
-    name: 'AI Powered Pipe Management',
+    name: 'AI Native Pipe Management',
     tagline: 'See every pipe. Track every stage. Ship with confidence.',
     description: 'Work order-centric inventory management that matches how your facility actually operates. From receiving to shipping, every pipe has a digital identity.',
     features: [
@@ -16,11 +16,13 @@ const products = [
     ],
     icon: Package,
     accent: 'orange',
-    accentBg: 'bg-orange-100 dark:bg-orange-900/30',
+    accentBg: 'bg-slate-50 dark:bg-white/[0.06] border border-slate-200 dark:border-white/[0.06] group-hover:border-accent group-hover:bg-orange-50 dark:group-hover:bg-orange-900/20',
     accentText: 'text-accent',
     accentBorder: 'border-accent',
+    iconDefault: 'text-slate-600 dark:text-slate-400 group-hover:text-accent',
+    shadowHover: 'hover:shadow-xl hover:shadow-orange-500/5',
     link: '/tracker',
-    cta: 'Explore Management',
+    cta: 'See Capabilities',
   },
   {
     name: 'MTR.AI',
@@ -33,12 +35,14 @@ const products = [
       'Attach compliance records to digital product passports',
     ],
     icon: FlaskConical,
-    accent: 'cyan',
-    accentBg: 'bg-cyan-100 dark:bg-cyan-900/30',
+    accent: 'indigo',
+    accentBg: 'bg-slate-50 dark:bg-white/[0.06] border border-slate-200 dark:border-white/[0.06] group-hover:border-secondary group-hover:bg-indigo-50 dark:group-hover:bg-indigo-900/20',
     accentText: 'text-secondary',
     accentBorder: 'border-secondary',
+    iconDefault: 'text-slate-600 dark:text-slate-400 group-hover:text-secondary',
+    shadowHover: 'hover:shadow-xl hover:shadow-indigo-500/5',
     link: '/mtr',
-    cta: 'Explore MTR.AI',
+    cta: 'See Capabilities',
   },
 ]
 
@@ -57,10 +61,10 @@ export default function PlatformOverview() {
             <ScrollReveal key={product.name} delay={i * 0.15}>
               <Link
                 to={product.link}
-                className={`group block bg-surface border border-border rounded-2xl p-8 hover:shadow-xl dark:hover:shadow-black/30 hover:-translate-y-1 transition-all duration-300 h-full border-t-4 ${product.accentBorder}`}
+                className={`group block bg-surface border border-border/60 dark:border-white/[0.08] rounded-2xl p-8 ${product.shadowHover} dark:hover:shadow-black/40 hover:-translate-y-1 transition-all duration-300 h-full border-t-4 ${product.accentBorder}`}
               >
-                <div className={`w-14 h-14 rounded-xl ${product.accentBg} flex items-center justify-center mb-5`}>
-                  <product.icon className={`w-7 h-7 ${product.accentText}`} />
+                <div className={`w-14 h-14 rounded-full ${product.accentBg} flex items-center justify-center mb-5 transition-all duration-300`}>
+                  <product.icon className={`w-7 h-7 ${product.iconDefault} transition-colors duration-300`} />
                 </div>
 
                 <h3 className="font-display text-2xl font-bold text-text mb-2">{product.name}</h3>
@@ -76,9 +80,9 @@ export default function PlatformOverview() {
                   ))}
                 </ul>
 
-                <span className={`inline-flex items-center gap-1 text-sm font-semibold ${product.accentText} group-hover:gap-2 transition-all`}>
+                <span className={`inline-flex items-center gap-1.5 text-sm font-semibold ${product.accentText} group-hover:gap-2.5 transition-all`}>
                   {product.cta}
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                 </span>
               </Link>
             </ScrollReveal>

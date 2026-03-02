@@ -8,7 +8,7 @@ const features = [
   {
     label: 'Inventory Tracking',
     title: 'Your facility thinks in work orders. Now your software does too.',
-    description: "Most pipe software forces you to manage individual pipes. But your operators think in work orders — 'Is WO-2025-003 ready to ship?' AI Powered Pipe Management derives work order status automatically from pipe states. No manual status updates. No reconciliation. Just real-time visibility.",
+    description: "Most pipe software forces you to manage individual pipes. But your operators think in work orders — 'Is WO-2025-003 ready to ship?' AI Native Pipe Management derives work order status automatically from pipe states. No manual status updates. No reconciliation. Just real-time visibility.",
     bullets: [
       'Operations Center dashboard shows what needs attention today — not a wall of 6,000 pipes',
       'Status flows automatically: receiving → processing → QC → ready to ship → loaded → shipped',
@@ -28,7 +28,7 @@ const features = [
       'Compliance checks against API 5L specs with parameter-level pass/warning/fail results',
     ],
     icon: FileCheck,
-    color: 'cyan',
+    color: 'indigo',
     visual: 'mtr',
   },
   {
@@ -55,14 +55,14 @@ function FeatureVisual({ type }) {
           <span className="text-xs font-medium text-text-muted">Operations Center</span>
         </div>
         {[
-          { wo: 'WO-2025-003', status: 'Ready to Ship', color: 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300', progress: 95 },
-          { wo: 'WO-2025-004', status: 'Processing', color: 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300', progress: 60 },
-          { wo: 'WO-2025-005', status: 'Receiving', color: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300', progress: 20 },
+          { wo: 'WO-2025-003', status: 'Ready to Ship', color: 'bg-[#F3E8FF] text-[#7E22CE] dark:bg-purple-900/30 dark:text-purple-300', progress: 95 },
+          { wo: 'WO-2025-004', status: 'Processing', color: 'bg-[#FEF3C7] text-[#B45309] dark:bg-amber-900/30 dark:text-amber-300', progress: 60 },
+          { wo: 'WO-2025-005', status: 'Receiving', color: 'bg-[#DBEAFE] text-[#1D4ED8] dark:bg-blue-900/30 dark:text-blue-300', progress: 20 },
         ].map((item) => (
           <div key={item.wo} className="flex items-center justify-between py-3 border-b border-border last:border-0">
             <div className="flex items-center gap-3">
               <span className="text-sm font-semibold text-text">{item.wo}</span>
-              <span className={`text-[11px] font-medium px-2 py-0.5 rounded-full ${item.color}`}>{item.status}</span>
+              <span className={`text-[11px] font-semibold px-2 py-0.5 rounded-full ${item.color}`}>{item.status}</span>
             </div>
             <div className="w-24 h-1.5 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
               <div className="h-full bg-accent rounded-full" style={{ width: `${item.progress}%` }} />

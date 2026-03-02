@@ -36,7 +36,7 @@ const testimonials = [
     author: 'Quality Director',
     company: 'Permian Basin E&P',
     vertical: 'E&P',
-    color: 'cyan',
+    color: 'indigo',
   },
   {
     quote: "VLX inspections syncing directly into the pipe record changed everything for our field teams. No more paper forms, no more manual data transfer. Scan and go.",
@@ -63,7 +63,7 @@ const verticals = [
       'Zero manual status updates — pipe state drives WO state',
       'Barcode labels printed at the final bench eliminate hand-writing errors',
     ],
-    products: ['AI Powered Pipe Management', 'VLX Inspections'],
+    products: ['AI Native Pipe Management', 'VLX Inspections'],
   },
   {
     name: 'Pipe Yards & Distributors',
@@ -73,7 +73,7 @@ const verticals = [
       'Client-ready documentation packages generated in one click',
       'Receiving reconciliation automated — manifest vs. physical count',
     ],
-    products: ['AI Powered Pipe Management', 'Yard Mapping'],
+    products: ['AI Native Pipe Management', 'Yard Mapping'],
   },
   {
     name: 'E&P Operators',
@@ -94,7 +94,7 @@ const verticals = [
       'Inspection data becomes part of the pipe\'s permanent digital record',
       'Clients receive reports linked to actual pipe records, not standalone PDFs',
     ],
-    products: ['VLX Inspections', 'AI Powered Pipe Management'],
+    products: ['VLX Inspections', 'AI Native Pipe Management'],
   },
   {
     name: 'Pipe Mills',
@@ -148,16 +148,16 @@ export default function Customers() {
               transition={{ delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Button href="https://app.octg.ai/signup" size="xl">
-                Start Free Trial
+              <Button href="mailto:hello@octg.ai?subject=Demo%20Request" size="xl">
+                Schedule a Demo
                 <ArrowRight className="w-5 h-5" />
               </Button>
               <Button
-                href="mailto:hello@octg.ai?subject=Demo%20Request"
+                href="mailto:hello@octg.ai?subject=Consultation"
                 variant="secondary"
                 size="xl"
               >
-                Schedule a Demo
+                Talk to Our Team
               </Button>
             </motion.div>
           </div>
@@ -184,19 +184,19 @@ export default function Customers() {
       </section>
 
       {/* Stats bar */}
-      <section className="bg-primary py-20">
+      <section className="bg-gradient-to-r from-slate-100 via-slate-50 to-slate-100 dark:from-[#0B0F1A] dark:via-[#111827] dark:to-[#0B0F1A] py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {stats.map((stat, i) => (
               <ScrollReveal key={stat.label} delay={i * 0.1}>
                 <div className="text-center">
-                  <div className="font-display text-4xl md:text-5xl font-extrabold text-white mb-1">
+                  <div className="font-display text-4xl md:text-5xl font-extrabold text-text mb-1">
                     <AnimatedCounter target={stat.value} suffix={stat.suffix} />
                   </div>
                   <div className="text-accent font-semibold text-sm uppercase tracking-wider mb-2">
                     {stat.label}
                   </div>
-                  <p className="text-slate-400 text-sm">{stat.detail}</p>
+                  <p className="text-text-muted text-sm">{stat.detail}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -356,34 +356,33 @@ export default function Customers() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-primary">
+      <section className="py-24 bg-surface-alt dark:bg-primary">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <ScrollReveal>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-text dark:text-white mb-4">
               Join the facilities modernizing pipe operations
             </h2>
-            <p className="text-slate-300 mb-8">
-              14-day free trial. No credit card required. See results on day one.
+            <p className="text-text-muted mb-8">
+              Custom-configured for your facility. Deployed in weeks, not months.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="https://app.octg.ai/signup" size="xl">
-                Start Free Trial
+              <Button href="mailto:hello@octg.ai?subject=Demo%20Request" size="xl">
+                Schedule a Demo
                 <ArrowRight className="w-5 h-5" />
               </Button>
               <Button
-                href="mailto:hello@octg.ai?subject=Demo%20Request"
+                href="mailto:hello@octg.ai?subject=Consultation"
                 variant="secondary"
                 size="xl"
-                className="!border-slate-600 !text-white hover:!bg-slate-800"
               >
-                Schedule a Demo
+                Talk to Our Team
               </Button>
             </div>
 
             {/* VLX footer mark */}
             <div className="flex items-center justify-center gap-2 mt-12 opacity-50">
-              <span className="text-slate-400 text-xs">Powered by</span>
-              <img src={vlxLogo} alt="VLX" className="h-4 brightness-0 invert" />
+              <span className="text-text-muted text-xs">Powered by</span>
+              <img src={vlxLogo} alt="VLX" className="h-4 brightness-0 dark:invert" />
             </div>
           </ScrollReveal>
         </div>

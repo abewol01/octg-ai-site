@@ -1,6 +1,7 @@
 import {
   LayoutDashboard, RefreshCw, Upload, Barcode, Scan,
-  FileDown, Map, AlertTriangle, ArrowRight, Check
+  FileDown, Map, ArrowRight, Check,
+  ClipboardList, Monitor, Phone, Clipboard, FileSpreadsheet, AlertCircle
 } from 'lucide-react'
 import PageLayout from '../components/layout/PageLayout'
 import ProductHero from '../components/products/ProductHero'
@@ -72,20 +73,20 @@ const features = [
 
 const howItWorks = [
   {
-    title: 'Import',
-    description: 'Upload manifests (Excel or PDF). Pipes are created with work order, heat, and spec data.',
+    title: 'Discovery',
+    description: 'We map your receiving-to-shipping workflow and identify where time and accuracy are lost.',
   },
   {
-    title: 'Track',
-    description: 'Pipes flow through your workflow. Status updates automatically via VLX scans or manual progression.',
+    title: 'Configure',
+    description: 'Platform adapted to your stages, status rules, and barcode format.',
   },
   {
-    title: 'Ship',
-    description: 'Generate barcodes, scan at load out, export manifests. Full documentation in one click.',
+    title: 'Deploy',
+    description: 'Go live with trained operators and migrated data.',
   },
   {
-    title: 'Verify',
-    description: 'Digital product passports combine everything: inventory data, inspection reports, MTRs, compliance records.',
+    title: 'Optimize',
+    description: 'Continuous tuning as your operation runs. Dedicated support.',
   },
 ]
 
@@ -93,34 +94,153 @@ export default function Tracker() {
   return (
     <PageLayout>
       <ProductHero
-        label="AI Powered Pipe Management"
+        label="AI Native Pipe Management"
         headline="Every pipe. Every stage. One system."
-        subheadline="AI Powered Pipe Management is work order-centric inventory management built for how coating facilities, pipe yards, and distributors actually operate."
+        subheadline="AI Native Pipe Management is work order-centric inventory management built for how coating facilities, pipe yards, and distributors actually operate."
       />
 
-      {/* Problem section */}
-      <section className="py-24 bg-surface-alt">
-        <div className="max-w-7xl mx-auto px-6">
-          <SectionHeading
-            title="Your pipe management shouldn't require three systems and a spreadsheet."
-          />
-          <div className="max-w-3xl mx-auto mt-8 space-y-4">
-            {[
-              'Receiving: someone writes pipe numbers on a clipboard',
-              "Processing: status lives in someone's head",
-              'Shipping: a hand-written tally gets typed into Excel, then cross-referenced against inventory',
-            ].map((pain, i) => (
-              <ScrollReveal key={i} delay={i * 0.1}>
-                <div className="flex items-start gap-3 bg-surface border border-border rounded-xl p-5">
-                  <AlertTriangle className="w-5 h-5 text-warning shrink-0 mt-0.5" />
-                  <p className="text-text-muted text-sm">{pain}</p>
+      {/* Problem section — dark navy */}
+      <section className="relative py-24 bg-slate-900 overflow-hidden">
+        {/* Subtle grid pattern */}
+        <div className="absolute inset-0 pointer-events-none" style={{
+          backgroundImage: 'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
+          backgroundSize: '40px 40px',
+        }} />
+
+        <div className="relative max-w-7xl mx-auto px-6">
+          <ScrollReveal>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-white text-center max-w-3xl mx-auto leading-tight">
+              Your pipe tracking shouldn&apos;t require three systems and a spreadsheet.
+            </h2>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-3 gap-6 mt-14">
+            {/* Card 1: Receiving */}
+            <ScrollReveal delay={0}>
+              <div className="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 h-full flex flex-col hover:border-slate-600 transition-colors">
+                {/* Top visual mockup */}
+                <div className="bg-slate-800 rounded-lg p-4 mb-5 border border-slate-700/50">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Clipboard className="w-5 h-5 text-amber-400" />
+                    <span className="text-xs font-medium text-slate-500 uppercase tracking-wider">Manual Tally</span>
+                  </div>
+                  <div className="space-y-2 font-mono text-xs">
+                    <div className="flex items-center gap-2 text-slate-400">
+                      <span className="text-green-400">✓</span> Pipe #2847 — 42.3 ft
+                    </div>
+                    <div className="flex items-center gap-2 text-slate-400">
+                      <span className="text-green-400">✓</span> Pipe #2848 — 41.8 ft
+                    </div>
+                    <div className="flex items-center gap-2 text-slate-500">
+                      <span className="text-amber-400">?</span> Pipe #2849 — <span className="text-amber-400 italic">illegible</span>
+                    </div>
+                  </div>
                 </div>
-              </ScrollReveal>
-            ))}
-            <ScrollReveal delay={0.3}>
-              <p className="text-center text-lg font-semibold text-text pt-4">Sound familiar?</p>
+
+                <h3 className="text-white font-semibold text-lg mb-2">Receiving</h3>
+                <p className="text-slate-400 text-sm leading-relaxed flex-1">
+                  Someone writes pipe numbers on a clipboard. Then types them into a spreadsheet. Then re-enters them somewhere else. Three entries for the same pipe — and every keystroke is a chance for error.
+                </p>
+                <div className="mt-4 pt-4 border-t border-slate-700/50">
+                  <span className="text-amber-400 text-sm font-semibold">~15 min per truck</span>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Card 2: Processing */}
+            <ScrollReveal delay={0.1}>
+              <div className="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 h-full flex flex-col hover:border-slate-600 transition-colors">
+                {/* Top visual mockup */}
+                <div className="bg-slate-800 rounded-lg p-4 mb-5 border border-slate-700/50">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-xs font-medium text-slate-500 uppercase tracking-wider">Status Check: WO-2025-003</span>
+                  </div>
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="flex flex-col items-center gap-1">
+                      <Monitor className="w-5 h-5 text-slate-500" />
+                      <span className="text-[10px] text-slate-500">System</span>
+                      <span className="text-[10px] text-amber-400">Pending</span>
+                    </div>
+                    <div className="w-4 h-px bg-slate-700 relative">
+                      <span className="absolute -top-0.5 left-1/2 -translate-x-1/2 text-red-400 text-[10px]">✕</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-1">
+                      <ClipboardList className="w-5 h-5 text-slate-500" />
+                      <span className="text-[10px] text-slate-500">Log</span>
+                      <span className="text-[10px] text-green-400">Done</span>
+                    </div>
+                    <div className="w-4 h-px bg-slate-700 relative">
+                      <span className="absolute -top-0.5 left-1/2 -translate-x-1/2 text-red-400 text-[10px]">✕</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-1">
+                      <Phone className="w-5 h-5 text-slate-500" />
+                      <span className="text-[10px] text-slate-500">Call</span>
+                      <span className="text-[10px] text-slate-500">???</span>
+                    </div>
+                  </div>
+                </div>
+
+                <h3 className="text-white font-semibold text-lg mb-2">Processing</h3>
+                <p className="text-slate-400 text-sm leading-relaxed flex-1">
+                  Where is WO-2025-003? It depends on who you ask. The blast crew says done. The coating log says pending. The actual pipe? Nobody checked.
+                </p>
+                <div className="mt-4 pt-4 border-t border-slate-700/50">
+                  <span className="text-amber-400 text-sm font-semibold">~3 phone calls per status check</span>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Card 3: Shipping */}
+            <ScrollReveal delay={0.2}>
+              <div className="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 h-full flex flex-col hover:border-slate-600 transition-colors">
+                {/* Top visual mockup */}
+                <div className="bg-slate-800 rounded-lg p-4 mb-5 border border-slate-700/50">
+                  <div className="flex items-center gap-2 mb-3">
+                    <FileSpreadsheet className="w-5 h-5 text-slate-500" />
+                    <span className="text-xs font-medium text-slate-500 uppercase tracking-wider">Tally.xlsx</span>
+                  </div>
+                  <div className="space-y-1.5 font-mono text-[10px]">
+                    <div className="flex gap-2">
+                      <span className="text-slate-500 w-16">H#A1B2C3</span>
+                      <span className="text-slate-400">42.3 ft</span>
+                      <span className="text-green-400/60">✓</span>
+                    </div>
+                    <div className="flex gap-2">
+                      <span className="text-red-400 w-16 line-through">H#A1B2C4</span>
+                      <span className="text-slate-400">41.8 ft</span>
+                      <span className="flex items-center gap-0.5">
+                        <AlertCircle className="w-2.5 h-2.5 text-red-400" />
+                        <span className="text-red-400">Mismatch</span>
+                      </span>
+                    </div>
+                    <div className="flex gap-2">
+                      <span className="text-slate-500 w-16">H#A1B2C5</span>
+                      <span className="text-amber-400">??? ft</span>
+                      <span className="text-amber-400">Missing</span>
+                    </div>
+                  </div>
+                </div>
+
+                <h3 className="text-white font-semibold text-lg mb-2">Shipping</h3>
+                <p className="text-slate-400 text-sm leading-relaxed flex-1">
+                  A hand-written tally gets typed into Excel. Then cross-referenced against inventory. Then cross-referenced against the BOL. One typo in a heat number means a documentation nightmare.
+                </p>
+                <div className="mt-4 pt-4 border-t border-slate-700/50">
+                  <span className="text-amber-400 text-sm font-semibold">~3 hours per shipment</span>
+                </div>
+              </div>
             </ScrollReveal>
           </div>
+
+          {/* Sound familiar? */}
+          <ScrollReveal delay={0.3}>
+            <div className="text-center mt-14">
+              <p className="text-white text-xl font-semibold mb-2">Sound familiar?</p>
+              <p className="text-slate-400 max-w-2xl mx-auto">
+                Every hour your team spends on data entry is an hour they&apos;re not spending on operations.
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -180,11 +300,11 @@ export default function Tracker() {
                   { text: 'Export to PDF, Excel, or integrate via API', icon: FileDown },
                 ].map((item) => (
                   <div key={item.text} className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 rounded-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center shrink-0">
                       {item.image ? (
                         <img src={item.image} alt="VLX" className="w-6 h-6 object-contain" />
                       ) : (
-                        <item.icon className="w-5 h-5 text-accent" />
+                        <item.icon className="w-5 h-5 text-slate-600 dark:text-slate-400" />
                       )}
                     </div>
                     <p className="text-sm text-text-muted">{item.text}</p>
@@ -197,22 +317,22 @@ export default function Tracker() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-primary">
+      <section className="py-24 bg-surface-alt dark:bg-primary">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <ScrollReveal>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-text dark:text-white mb-4">
               Start managing pipes the modern way
             </h2>
-            <p className="text-slate-300 mb-8">
-              14-day free trial. No credit card required.
+            <p className="text-text-muted mb-8">
+              Custom-configured for your facility. Deployed in weeks, not months.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="https://app.octg.ai/signup" size="xl">
-                Start Free Trial
+              <Button href="mailto:hello@octg.ai?subject=Demo%20Request" size="xl">
+                Schedule a Demo
                 <ArrowRight className="w-5 h-5" />
               </Button>
-              <Button to="/pricing" variant="secondary" size="xl" className="!border-slate-600 !text-white hover:!bg-slate-800">
-                See Pricing
+              <Button href="mailto:hello@octg.ai?subject=Consultation" variant="secondary" size="xl">
+                Talk to Our Team
               </Button>
             </div>
           </ScrollReveal>

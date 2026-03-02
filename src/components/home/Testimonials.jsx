@@ -8,7 +8,7 @@ import tubaceroLogo from '../../assets/tubacero-logo.png'
 
 const testimonials = [
   {
-    quote: "We went from spending 3 hours on shipping tallies to generating them in 30 seconds. OCTG.AI isn't just better software — it's a different category.",
+    quote: "We went from spending 3 hours on shipping tallies to generating them in 30 seconds. The implementation team understood our workflow from day one.",
     author: 'Operations Manager',
     company: 'Gulf Coast Coating Facility',
   },
@@ -52,7 +52,7 @@ export default function Testimonials() {
         <div className="grid md:grid-cols-2 gap-8">
           {testimonials.map((t, i) => (
             <ScrollReveal key={t.author} delay={i * 0.15}>
-              <div className="bg-surface border border-border rounded-2xl p-8 h-full">
+              <div className="bg-surface border border-gray-200/60 dark:border-white/[0.06] rounded-2xl p-8 h-full shadow-sm dark:shadow-black/20">
                 <Quote className="w-8 h-8 text-accent/30 mb-4" />
                 <blockquote className="text-lg text-text leading-relaxed mb-6">
                   &ldquo;{t.quote}&rdquo;

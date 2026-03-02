@@ -35,8 +35,8 @@ export default function ProblemStatement() {
           {painPoints.map((point, i) => (
             <ScrollReveal key={point.title} delay={i * 0.1}>
               <Card className="h-full">
-                <div className="w-12 h-12 rounded-xl bg-red-50 dark:bg-red-900/20 flex items-center justify-center mb-4">
-                  <point.icon className="w-6 h-6 text-danger" />
+                <div className="w-12 h-12 rounded-full bg-gray-100 dark:bg-white/[0.06] border-0 dark:border dark:border-white/[0.06] flex items-center justify-center mb-4">
+                  <point.icon className="w-6 h-6 text-gray-600 dark:text-gray-400" />
                 </div>
                 <h3 className="font-display text-lg font-bold text-text mb-2">{point.title}</h3>
                 <p className="text-sm text-text-muted leading-relaxed">{point.text}</p>

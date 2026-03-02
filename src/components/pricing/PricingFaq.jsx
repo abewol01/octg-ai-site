@@ -5,56 +5,36 @@ import ScrollReveal from '../shared/ScrollReveal'
 
 const faqs = [
   {
-    q: 'What counts as an "active pipe"?',
-    a: "Any pipe record in your system that hasn't been archived. Shipped pipes that are more than 90 days old are automatically archived and don't count toward your limit. You can access archived data anytime.",
+    q: 'How long does deployment take?',
+    a: "Most facilities are fully operational in 4-8 weeks from kickoff. The timeline depends on your workflow complexity, integration requirements, and team availability for training.",
   },
   {
-    q: 'What happens if I exceed my MTR page limit?',
-    a: "You'll get a notification when you reach 80% of your monthly limit. If you exceed it, additional pages are processed at $0.50/page, billed at the end of your billing cycle. No service interruption.",
+    q: 'What does it cost?',
+    a: "Pricing is based on your facility's scale, number of operators, and the capabilities you need. Every deployment is scoped individually after a discovery call. We'll give you a clear proposal — no hidden fees.",
   },
   {
-    q: 'Can I switch between plans?',
-    a: 'Yes. Upgrade anytime — changes take effect immediately. Downgrade at the end of your billing cycle. All data is preserved when moving between plans.',
+    q: 'Can we start with just inventory tracking or just MTR compliance?',
+    a: 'Yes. The platform is modular. Many clients start with the capability that solves their biggest pain point and expand from there. Each module works standalone or together.',
   },
   {
-    q: 'Is VLX included or separate?',
-    a: 'VLX mobile inspection access is included in every OCTG.AI plan. Each plan includes a set number of VLX seats (team members who can use the mobile app for field inspections). Additional seats can be added for $49/user/month.',
+    q: 'Do we need to replace our current systems?',
+    a: "No. OCTG.AI is designed to complement your existing workflows. We integrate with your current documentation processes and can run alongside your existing systems during transition.",
   },
   {
-    q: 'Do you offer discounts for annual billing?',
-    a: 'Yes. Annual billing saves 17% (equivalent to 2 months free). All annual plans are billed upfront.',
-  },
-  {
-    q: 'What does the free trial include?',
-    a: 'The 14-day trial gives you access to Professional-tier features with usage limits (500 pipes, 50 MTR pages, 25 compliance checks). No credit card required. At the end of the trial, your account becomes read-only — upgrade to any paid plan to continue. All data is preserved.',
-  },
-  {
-    q: 'Can I use MTR.AI without Pipe Management?',
-    a: 'Yes. MTR.AI is available as a standalone product. You can upload MTRs, run compliance checks, and manage specs without using the pipe management features. If you decide to add management later, your MTR data carries over seamlessly.',
-  },
-  {
-    q: 'What compliance standards are supported?',
-    a: "OCTG.AI ships with API 5L specs pre-loaded (Grade B, X42, X52, X60, X65 — both PSL1 and PSL2). Professional and Enterprise tiers can create custom specs for any standard (API 5CT, ASTM, project-specific requirements). We're continuously adding more industry standards.",
-  },
-  {
-    q: 'How is my data secured?',
-    a: 'OCTG.AI runs on AWS infrastructure with AES-256 encryption at rest, TLS in transit, and role-based access controls. Multi-tenant data isolation ensures your data is completely separate from other organizations. VLX maintains SOC 2 compliant infrastructure.',
-  },
-  {
-    q: 'Can I import data from my current system?',
-    a: "Yes. OCTG.AI supports Excel/CSV import with auto-column-mapping, and AI-powered PDF import for scanned documents. If you're migrating from TDS or another pipe tracking system, our onboarding team can help with bulk data migration (available on Professional and Enterprise plans).",
+    q: 'What about VLX — is that separate?',
+    a: 'VLX mobile inspection access is included in every deployment. We configure VLX templates specifically for your QC workflow and handle all the integration setup.',
   },
   {
     q: 'Do you support multiple facilities?',
-    a: 'The Enterprise plan supports unlimited facilities with centralized management. Each facility can have its own team members, work orders, and storage zones while sharing specs, compliance data, and reporting at the organization level.',
+    a: 'Yes. Each facility gets its own configuration while sharing centralized compliance specs, customer data, and reporting. Multi-site visibility is built in.',
   },
   {
-    q: 'What barcode printers are supported?',
-    a: 'OCTG.AI generates ZPL output compatible with Zebra thermal printers (the industry standard for pipe labels). Any Zebra printer that accepts ZPL commands will work. Code 128 barcode format.',
+    q: 'What kind of support do we get?',
+    a: 'Every deployment includes a dedicated point of contact, priority support with direct access (not a ticket queue), and quarterly reviews to optimize your workflows.',
   },
   {
-    q: 'Is there an API?',
-    a: 'API access is available on the Enterprise plan. The REST API supports pipe CRUD operations, work order management, compliance queries, and export generation. Documentation provided upon request.',
+    q: 'Is our data secure?',
+    a: 'Your deployment runs on AWS infrastructure with AES-256 encryption, TLS in transit, and role-based access controls. Multi-tenant data isolation ensures your data is completely separate. SOC 2 compliant infrastructure via VLX.',
   },
 ]
 

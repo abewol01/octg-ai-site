@@ -5,7 +5,7 @@ export default function MtrHeatVerificationMockup() {
     {
       heat: 'H-84521',
       status: 'Pass',
-      statusColor: 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300',
+      statusColor: 'bg-[#DCFCE7] text-[#15803D] dark:bg-green-900/30 dark:text-green-300',
       icon: Check,
       iconColor: 'text-success',
       detail: '12 pipes, 8 parameters checked',
@@ -19,7 +19,7 @@ export default function MtrHeatVerificationMockup() {
     {
       heat: 'H-84522',
       status: 'Warning',
-      statusColor: 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300',
+      statusColor: 'bg-[#FEF3C7] text-[#B45309] dark:bg-amber-900/30 dark:text-amber-300',
       icon: AlertTriangle,
       iconColor: 'text-warning',
       detail: '8 pipes, 1 marginal parameter',
@@ -28,7 +28,7 @@ export default function MtrHeatVerificationMockup() {
     {
       heat: 'H-84523',
       status: 'Fail',
-      statusColor: 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300',
+      statusColor: 'bg-[#FEE2E2] text-[#B91C1C] dark:bg-red-900/30 dark:text-red-300',
       icon: X,
       iconColor: 'text-danger',
       detail: '6 pipes, P exceeds max',

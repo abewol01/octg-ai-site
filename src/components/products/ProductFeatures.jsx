@@ -32,9 +32,9 @@ export default function ProductFeatures({ features, accentColor = 'orange' }) {
                 feature.visual
               ) : (
                 <div className="bg-surface border border-border rounded-xl p-6 shadow-sm">
-                  <div className={`w-full h-48 rounded-lg ${accentColor === 'cyan' ? 'bg-cyan-50 dark:bg-cyan-900/20' : 'bg-orange-50 dark:bg-orange-900/20'} flex items-center justify-center`}>
+                  <div className={`w-full h-48 rounded-lg ${accentColor === 'indigo' ? 'bg-indigo-50 dark:bg-indigo-900/20' : 'bg-orange-50 dark:bg-orange-900/20'} flex items-center justify-center`}>
                     <div className="text-center">
-                      <feature.icon className={`w-10 h-10 mx-auto mb-2 ${accentColor === 'cyan' ? 'text-secondary' : 'text-accent'}`} />
+                      <feature.icon className={`w-10 h-10 mx-auto mb-2 ${accentColor === 'indigo' ? 'text-secondary' : 'text-accent'}`} />
                       <span className="text-sm text-text-muted">{feature.title}</span>
                     </div>
                   </div>

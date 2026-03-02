@@ -44,12 +44,12 @@ export default function ProductHero({
             transition={{ delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4"
           >
-            <Button href="https://app.octg.ai/signup" size="xl">
-              Start Free Trial
+            <Button href="mailto:hello@octg.ai?subject=Demo%20Request" size="xl">
+              Schedule a Demo
               <ArrowRight className="w-5 h-5" />
             </Button>
-            <Button to="/pricing" variant="secondary" size="xl">
-              See Pricing
+            <Button href="mailto:hello@octg.ai?subject=Consultation" variant="secondary" size="xl">
+              Talk to Our Team
             </Button>
           </motion.div>
         </div>

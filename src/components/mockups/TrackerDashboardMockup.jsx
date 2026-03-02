@@ -1,15 +1,15 @@
 export default function TrackerDashboardMockup() {
   const kpis = [
-    { label: '12 Active WOs', color: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300' },
-    { label: '3 Attention', color: 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' },
-    { label: '5 Ready to Ship', color: 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300' },
+    { label: '12 Active WOs', color: 'bg-[#DBEAFE] text-[#1D4ED8] dark:bg-blue-900/30 dark:text-blue-300' },
+    { label: '3 Attention', color: 'bg-[#FEE2E2] text-[#B91C1C] dark:bg-red-900/30 dark:text-red-300' },
+    { label: '5 Ready to Ship', color: 'bg-[#F3E8FF] text-[#7E22CE] dark:bg-purple-900/30 dark:text-purple-300' },
   ]
 
   const workOrders = [
     {
       wo: 'WO-2025-003',
       status: 'Ready to Ship',
-      statusColor: 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300',
+      statusColor: 'bg-[#F3E8FF] text-[#7E22CE] dark:bg-purple-900/30 dark:text-purple-300',
       segments: [
         { color: 'bg-purple-400', width: '70%' },
         { color: 'bg-green-400', width: '25%' },
@@ -19,7 +19,7 @@ export default function TrackerDashboardMockup() {
     {
       wo: 'WO-2025-004',
       status: 'Processing',
-      statusColor: 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300',
+      statusColor: 'bg-[#FEF3C7] text-[#B45309] dark:bg-amber-900/30 dark:text-amber-300',
       segments: [
         { color: 'bg-amber-400', width: '45%' },
         { color: 'bg-blue-400', width: '30%' },
@@ -29,7 +29,7 @@ export default function TrackerDashboardMockup() {
     {
       wo: 'WO-2025-005',
       status: 'Receiving',
-      statusColor: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300',
+      statusColor: 'bg-[#DBEAFE] text-[#1D4ED8] dark:bg-blue-900/30 dark:text-blue-300',
       segments: [
         { color: 'bg-blue-400', width: '20%' },
         { color: 'bg-slate-300 dark:bg-slate-600', width: '80%' },

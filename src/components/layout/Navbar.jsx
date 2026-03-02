@@ -41,11 +41,11 @@ export default function Navbar() {
                   to="/tracker"
                   className="flex items-start gap-3 p-3 rounded-lg hover:bg-surface-alt transition-colors"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center shrink-0">
-                    <Package className="w-5 h-5 text-accent" />
+                  <div className="w-10 h-10 rounded-lg bg-gray-100 dark:bg-white/[0.06] flex items-center justify-center shrink-0">
+                    <Package className="w-5 h-5 text-gray-600 dark:text-gray-400" />
                   </div>
                   <div>
-                    <div className="font-semibold text-sm text-text">AI Powered Pipe Management</div>
+                    <div className="font-semibold text-sm text-text">AI Native Pipe Management</div>
                     <div className="text-xs text-text-muted mt-0.5">Pipe lifecycle management</div>
                   </div>
                 </Link>
@@ -53,8 +53,8 @@ export default function Navbar() {
                   to="/mtr"
                   className="flex items-start gap-3 p-3 rounded-lg hover:bg-surface-alt transition-colors"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-cyan-100 dark:bg-cyan-900/30 flex items-center justify-center shrink-0">
-                    <FlaskConical className="w-5 h-5 text-secondary" />
+                  <div className="w-10 h-10 rounded-lg bg-gray-100 dark:bg-white/[0.06] flex items-center justify-center shrink-0">
+                    <FlaskConical className="w-5 h-5 text-gray-600 dark:text-gray-400" />
                   </div>
                   <div>
                     <div className="font-semibold text-sm text-text">MTR.AI</div>
@@ -89,8 +89,8 @@ export default function Navbar() {
             {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
           </button>
 
-          <Button href="https://app.octg.ai/signup" size="sm">
-            Start Free Trial
+          <Button href="mailto:hello@octg.ai?subject=Demo%20Request" size="sm">
+            Schedule a Demo
           </Button>
         </div>
 
@@ -126,7 +126,7 @@ export default function Navbar() {
               >
                 <Package className="w-5 h-5 text-accent" />
                 <div>
-                  <div className="font-medium text-sm">AI Powered Pipe Management</div>
+                  <div className="font-medium text-sm">AI Native Pipe Management</div>
                   <div className="text-xs text-text-muted">Pipe lifecycle management</div>
                 </div>
               </Link>
@@ -135,7 +135,7 @@ export default function Navbar() {
                 className="flex items-center gap-3 p-3 rounded-lg hover:bg-surface-alt"
                 onClick={() => setMobileOpen(false)}
               >
-                <FlaskConical className="w-5 h-5 text-secondary" />
+                <FlaskConical className="w-5 h-5 text-gray-600 dark:text-gray-400" />
                 <div>
                   <div className="font-medium text-sm">MTR.AI</div>
                   <div className="text-xs text-text-muted">AI compliance engine</div>
@@ -156,8 +156,8 @@ export default function Navbar() {
             >
               Pricing
             </Link>
-            <Button href="https://app.octg.ai/signup" size="lg" className="w-full">
-              Start Free Trial
+            <Button href="mailto:hello@octg.ai?subject=Demo%20Request" size="lg" className="w-full">
+              Schedule a Demo
             </Button>
           </div>
         </div>
