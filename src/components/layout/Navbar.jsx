@@ -18,7 +18,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-1 font-display text-xl font-bold">
+        <Link to="/" className="font-display text-xl font-bold">
           <span className="text-text">OCTG</span>
           <span className="text-accent">.AI</span>
         </Link>
