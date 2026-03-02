@@ -7,6 +7,8 @@ import Pricing from './pages/Pricing'
 import Tracker from './pages/Tracker'
 import Mtr from './pages/Mtr'
 import Customers from './pages/Customers'
+import FieldIntelligence from './pages/FieldIntelligence'
+import Security from './pages/Security'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -27,6 +29,8 @@ export default function App() {
           <Route path="/tracker" element={<Tracker />} />
           <Route path="/mtr" element={<Mtr />} />
           <Route path="/customers" element={<Customers />} />
+          <Route path="/field-intelligence" element={<FieldIntelligence />} />
+          <Route path="/security" element={<Security />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

@@ -1,12 +1,14 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, ChevronDown, Package, FlaskConical, Sun, Moon } from 'lucide-react'
+import { Menu, X, ChevronDown, Package, FlaskConical, Shield, Sun, Moon } from 'lucide-react'
 import { useTheme } from '../../context/ThemeContext'
 import Button from '../shared/Button'
+import vlxIcon from '../../assets/vlx-icon.png'
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [productsOpen, setProductsOpen] = useState(false)
+  const [resourcesOpen, setResourcesOpen] = useState(false)
   const location = useLocation()
   const { theme, toggleTheme } = useTheme()
 
@@ -61,6 +63,18 @@ export default function Navbar() {
                     <div className="text-xs text-text-muted mt-0.5">AI compliance engine</div>
                   </div>
                 </Link>
+                <Link
+                  to="/field-intelligence"
+                  className="flex items-start gap-3 p-3 rounded-lg hover:bg-surface-alt transition-colors"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-gray-100 dark:bg-white/[0.06] flex items-center justify-center shrink-0">
+                    <img src={vlxIcon} alt="VLX" className="w-6 h-6 object-contain" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-sm text-text">VLX Field Intelligence</div>
+                    <div className="text-xs text-text-muted mt-0.5">Verified evidence & traceability</div>
+                  </div>
+                </Link>
               </div>
               </div>
             )}
@@ -79,6 +93,37 @@ export default function Navbar() {
           >
             Pricing
           </Link>
+
+          {/* Resources Dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={() => setResourcesOpen(true)}
+            onMouseLeave={() => setResourcesOpen(false)}
+          >
+            <button className="flex items-center gap-1 text-sm font-medium text-text-muted hover:text-text transition-colors cursor-pointer">
+              Resources
+              <ChevronDown className={`w-4 h-4 transition-transform ${resourcesOpen ? 'rotate-180' : ''}`} />
+            </button>
+
+            {resourcesOpen && (
+              <div className="absolute top-full right-0 w-72 pt-2">
+              <div className="bg-surface border border-border rounded-xl shadow-xl dark:shadow-black/30 p-2">
+                <Link
+                  to="/security"
+                  className="flex items-start gap-3 p-3 rounded-lg hover:bg-surface-alt transition-colors"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-green-50 dark:bg-green-500/[0.08] flex items-center justify-center shrink-0">
+                    <Shield className="w-5 h-5 text-green-500 dark:text-green-400" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-sm text-text">Security</div>
+                    <div className="text-xs text-text-muted mt-0.5">Data protection & compliance</div>
+                  </div>
+                </Link>
+              </div>
+              </div>
+            )}
+          </div>
 
           {/* Theme Toggle */}
           <button
@@ -141,6 +186,17 @@ export default function Navbar() {
                   <div className="text-xs text-text-muted">AI compliance engine</div>
                 </div>
               </Link>
+              <Link
+                to="/field-intelligence"
+                className="flex items-center gap-3 p-3 rounded-lg hover:bg-surface-alt"
+                onClick={() => setMobileOpen(false)}
+              >
+                <img src={vlxIcon} alt="VLX" className="w-5 h-5 object-contain" />
+                <div>
+                  <div className="font-medium text-sm">VLX Field Intelligence</div>
+                  <div className="text-xs text-text-muted">Verified evidence & traceability</div>
+                </div>
+              </Link>
             </div>
             <Link
               to="/customers"
@@ -156,6 +212,20 @@ export default function Navbar() {
             >
               Pricing
             </Link>
+            <div className="space-y-1">
+              <div className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">Resources</div>
+              <Link
+                to="/security"
+                className="flex items-center gap-3 p-3 rounded-lg hover:bg-surface-alt"
+                onClick={() => setMobileOpen(false)}
+              >
+                <Shield className="w-5 h-5 text-green-500 dark:text-green-400" />
+                <div>
+                  <div className="font-medium text-sm">Security</div>
+                  <div className="text-xs text-text-muted">Data protection & compliance</div>
+                </div>
+              </Link>
+            </div>
             <Button href="mailto:hello@octg.ai?subject=Demo%20Request" size="lg" className="w-full">
               Schedule a Demo
             </Button>

@@ -28,7 +28,7 @@ export default function ProblemStatement() {
         <SectionHeading
           label="The Problem"
           title="The industry's dirty secret"
-          description="The oil and gas pipe supply chain still runs on the same tools it used 20 years ago. Manual tallies. Disconnected spreadsheets. Software that looks — and works — like it's from 2002."
+          description="The oil and gas pipe supply chain still runs on the same tools it used 20 years ago. Manual tallies. Disconnected spreadsheets. Software that looks — and works — like it wasn't built for modern operations."
         />
 
         <div className="grid md:grid-cols-3 gap-6 mt-12">

@@ -7,6 +7,7 @@ import FeatureHighlights from '../components/home/FeatureHighlights'
 import UseCases from '../components/home/UseCases'
 import Testimonials from '../components/home/Testimonials'
 import CtaSection from '../components/home/CtaSection'
+import LifecycleTimeline from '../components/shared/LifecycleTimeline'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <PlatformOverview />
       <MetricsBar />
       <FeatureHighlights />
+      <LifecycleTimeline />
       <UseCases />
       <Testimonials />
       <CtaSection />

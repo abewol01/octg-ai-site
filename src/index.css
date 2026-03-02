@@ -88,3 +88,60 @@ h1, h2, h3, h4, h5, h6 {
 html {
   scroll-behavior: smooth;
 }
+
+/* ─── VLX Field Intelligence Hero Animations ─── */
+
+/* Dashed line flow along SVG connections */
+.vlx-dash-flow {
+  animation: vlxDashFlow 2s linear infinite;
+}
+@keyframes vlxDashFlow {
+  to { stroke-dashoffset: -32; }
+}
+
+/* Central hub pulse */
+.vlx-hub-pulse {
+  animation: vlxHubPulse 3s ease-in-out infinite;
+}
+@keyframes vlxHubPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(59,130,246,0.15); }
+  50% { box-shadow: 0 0 40px rgba(59,130,246,0.3); }
+}
+
+/* Node float */
+.vlx-node-float {
+  animation: vlxNodeFloat 6s ease-in-out infinite;
+}
+@keyframes vlxNodeFloat {
+  0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+  50% { transform: translate(-50%, -50%) translateY(-8px); }
+}
+
+/* Data particles flowing to center */
+.vlx-particle {
+  animation: vlxParticle 4s ease-in-out infinite;
+}
+@keyframes vlxParticle {
+  0% { left: var(--start-x); top: var(--start-y); opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { left: var(--target-x); top: var(--target-y); opacity: 0; }
+}
+
+/* Badge pulse */
+.vlx-badge-pulse {
+  animation: vlxBadgePulse 2s ease-in-out infinite;
+}
+@keyframes vlxBadgePulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 4px rgba(59,130,246,0.4); }
+  50% { opacity: 0.6; box-shadow: 0 0 8px rgba(59,130,246,0.6); }
+}
+
+/* KYPiT verified badge pulse */
+.vlx-kypit-pulse {
+  animation: vlxKypitPulse 4s ease-in-out infinite;
+}
+@keyframes vlxKypitPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}

@@ -32,6 +32,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/field-intelligence" className="text-text-muted text-sm hover:text-text dark:hover:text-white transition-colors">
+                  VLX Field Intelligence
+                </Link>
+              </li>
+              <li>
                 <Link to="/pricing" className="text-text-muted text-sm hover:text-text dark:hover:text-white transition-colors">
                   How We Deploy
                 </Link>
@@ -50,6 +55,11 @@ export default function Footer() {
             <ul className="space-y-2.5">
               <li>
                 <span className="text-text-muted text-sm">About</span>
+              </li>
+              <li>
+                <Link to="/security" className="text-text-muted text-sm hover:text-text dark:hover:text-white transition-colors">
+                  Security
+                </Link>
               </li>
               <li>
                 <a href="mailto:hello@octg.ai" className="text-text-muted text-sm hover:text-text dark:hover:text-white transition-colors">
