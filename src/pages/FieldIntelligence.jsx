@@ -291,6 +291,11 @@ function WhatIsIt() {
                       <span className={`font-semibold text-sm ${layer.highlighted ? 'text-blue-400' : 'text-text'}`}>
                         {layer.label}
                       </span>
+                      {layer.highlighted && (
+                        <span className="ml-auto text-[10px] font-semibold text-blue-400 uppercase tracking-wider">
+                          Highlighted
+                        </span>
+                      )}
                     </div>
                   </div>
                   {i < layers.length - 1 && (
